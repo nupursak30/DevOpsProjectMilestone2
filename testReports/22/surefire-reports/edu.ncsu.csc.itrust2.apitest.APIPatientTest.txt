@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: edu.ncsu.csc.itrust2.apitest.APIPatientTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 2, Errors: 1, Skipped: 0, Time elapsed: 0.01 s <<< FAILURE! - in edu.ncsu.csc.itrust2.apitest.APIPatientTest
+testPatientAPI(edu.ncsu.csc.itrust2.apitest.APIPatientTest)  Time elapsed: 0.004 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<200> but was:<404>
+	at edu.ncsu.csc.itrust2.apitest.APIPatientTest.testPatientAPI(APIPatientTest.java:115)
+
+testPatientAsPatient(edu.ncsu.csc.itrust2.apitest.APIPatientTest)  Time elapsed: 0.001 s  <<< ERROR!
+org.hibernate.exception.ConstraintViolationException: could not execute statement
+	at edu.ncsu.csc.itrust2.apitest.APIPatientTest.testPatientAsPatient(APIPatientTest.java:186)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'self_id' cannot be null
+	at edu.ncsu.csc.itrust2.apitest.APIPatientTest.testPatientAsPatient(APIPatientTest.java:186)
+
+testPatientUnauthenticated(edu.ncsu.csc.itrust2.apitest.APIPatientTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<401> but was:<404>
+	at edu.ncsu.csc.itrust2.apitest.APIPatientTest.testPatientUnauthenticated(APIPatientTest.java:158)
+

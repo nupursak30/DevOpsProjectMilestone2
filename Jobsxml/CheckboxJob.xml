@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description>This is a freestyple project for Checkbox node js application</description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>pwd
+export MONGO_PORT=3002
+export MONGO_IP=127.0.0.1
+export MONGO_USER='admin'
+export MONGO_PASSWORD='admin123'
+       
+cp -p -rf /var/lib/jenkins/jobs/checkboxBuildJob/site /var/lib/jenkins/workspace/checkboxBuildJob
+cd site
+
+sudo rm -rf node_modules
+echo &quot;Deleted node_modules&quot;
+
+npm install sinon
+npm install istanbul-middleware
+npm install sync-request
+npm install iter-tools
+npm install fs
+npm install mock-fs
+npm install lodash
+npm install random-js
+npm install esprima
+npm install randexp
+npm install
+echo &quot;npm install completed&quot;
+
+
+sudo pkill -f node
+
+echo &quot;................&quot;
+echo &quot;Running node main.js &quot;
+node main.js
+
+echo &quot;Running istanbule file&quot;
+BUILD_ID=dontKillMe node istanbulfile.js --coverage &amp;
+#node istanbulfile.js --coverage &amp;
+sleep 10s
+
+echo &quot;Running test.js&quot;
+node test.js
+</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+</project>

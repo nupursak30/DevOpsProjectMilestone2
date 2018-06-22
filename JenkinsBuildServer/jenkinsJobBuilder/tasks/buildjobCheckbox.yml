@@ -1,0 +1,26 @@
+  - name: Check if Checkbox job exists
+    become: yes
+    #become_user: jenkins
+    shell: java -jar {{ home_path }}/jenkins-cli.jar -s {{ jenkins_url }} list-jobs
+    register: job_checkbox
+    changed_when: "job_checkbox.stdout.find('{{ jenkincheckboxjobname }}') == -1"
+  
+  - name: Create a jenkins job named checkboxBuildJob using jenkins cli
+    become: yes
+    #become_user: jenkins
+    shell: java -jar "{{ home_path }}"/jenkins-cli.jar -s "{{ jenkins_url }}" create-job "{{ jenkincheckboxjobname }}" < "{{ jenkins_job_checkbox_config_xml_file }}"
+    when: "job_checkbox.stdout.find('{{ jenkincheckboxjobname }}') == -1"
+
+  - name: Copy code to checkboxBuildJob jenkins job
+    become: true
+    #shell: "cp -p -rf {{ jenkins_job_checkbox_build_src }} {{ jenkins_jobs_dest }}/{{ jenkincheckboxjobname }}"
+    shell: "cp -p -rf {{ jenkins_job_checkbox_build_src }} {{ jenkins_jobs_dest }}/{{ jenkincheckboxjobname }}"
+
+  - name: Make sure the Checkbox jenkins job has correct user and usergroup assigned
+    become: yes
+    file:
+      path: "{{ jenkins_jobs_dest }}"
+      owner: jenkins
+      group: jenkins
+      recurse: yes
+

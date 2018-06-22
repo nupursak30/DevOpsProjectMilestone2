@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: edu.ncsu.csc.itrust2.apitest.APIOfficeVisitTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 1.308 s <<< FAILURE! - in edu.ncsu.csc.itrust2.apitest.APIOfficeVisitTest
+testOfficeVisitAPI(edu.ncsu.csc.itrust2.apitest.APIOfficeVisitTest)  Time elapsed: 0.991 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<200> but was:<404>
+	at edu.ncsu.csc.itrust2.apitest.APIOfficeVisitTest.testOfficeVisitAPI(APIOfficeVisitTest.java:426)
+
+testPreScheduledOfficeVisit(edu.ncsu.csc.itrust2.apitest.APIOfficeVisitTest)  Time elapsed: 0.309 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<200> but was:<409>
+	at edu.ncsu.csc.itrust2.apitest.APIOfficeVisitTest.testPreScheduledOfficeVisit(APIOfficeVisitTest.java:129)
+

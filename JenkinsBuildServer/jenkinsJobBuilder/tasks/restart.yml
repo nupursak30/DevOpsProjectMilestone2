@@ -1,0 +1,16 @@
+  - name: Restart Jenkins
+    service: name=jenkins state=restarted
+    become: yes
+  #  when: jenkins_default|changed or plugin_install|changed
+
+  - name: Wait for Jenkins to restart
+    uri:
+      url: "{{ jenkins_url }}"
+      status_code: 200
+    register: result
+    until: >
+      'status' in result and
+      result['status'] == 200
+    retries: 60
+    delay: 10
+   # when: jenkins_default|changed or plugin_install|changed

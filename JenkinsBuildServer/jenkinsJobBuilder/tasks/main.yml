@@ -1,0 +1,11 @@
+  - import_tasks: emailChange.yml
+  - import_tasks: iTrust.yml
+  - import_tasks: buildjob.yml
+  - import_tasks: checkbox.yml
+  - import_tasks: buildjobCheckbox.yml
+  - meta: flush_handlers
+  - import_tasks: restart.yml
+  - import_tasks: runBuild.yml
+  - name: Pausing for the builds to complete
+    pause:
+      minutes: 4

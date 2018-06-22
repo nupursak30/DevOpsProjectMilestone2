@@ -1,0 +1,62 @@
+---
+-
+  hosts: localhost
+  name: "Jenkins Installation"
+  tasks:
+  - name: Adding repo for java 8 installation
+    apt_repository: repo='ppa:webupd8team/java' state=present
+    become: yes
+
+  - name: Setting the license as selected
+    shell: /bin/echo debconf shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections
+    become: yes
+
+  - name: Setting the license as seen
+    shell: /bin/echo debconf shared/accepted-oracle-license-v1-1 seen true | /usr/bin/debconf-set-selections
+    become: yes
+
+  #https://tecadmin.net/install-latest-nodejs-npm-on-ubuntu/
+  #Adding nodejs PPA
+  - name: Installing python packages for nodejs and npm
+    apt:
+      name: python-software-properties
+      state: present
+      update_cache: yes
+      cache_valid_time: 1800
+    become: yes
+
+  - name: Adding nodejs PPA
+    shell: curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash -
+    become: yes
+
+
+  - name: Installing git,java8,npm,nodejs
+    apt:
+      name: "{{ item }}"
+      state: present
+      update_cache: yes
+      cache_valid_time: 1800
+    become: yes
+    with_items:
+      - git
+      - oracle-java8-installer
+      - nodejs
+
+  #Installing Jenkins
+  - name: Add Jenkins Repository Key
+    apt_key:
+      url: "https://pkg.jenkins.io/debian/jenkins-ci.org.key"
+      state: present
+      validate_certs: no
+    become: yes
+
+  - name: Add Jenkins Source List
+    shell: echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list
+    become: yes
+
+  - name: Install Jenkins
+    apt:
+      name: jenkins
+      state: present
+      update_cache: yes
+    become: yes

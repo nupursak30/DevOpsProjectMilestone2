@@ -1,0 +1,15 @@
+---
+#home_path: /home/davitond/DevOpsProjectMilestone2
+home_path: "/home/{{ currentUser.stdout }}/DevOpsProjectMilestone2"
+jenkins_path: /var/lib/jenkins
+jenkins_user: admin
+jenkins_password: admin
+#jenkins_url: http://192.168.33.10:8090
+jenkins_url: http://localhost:8090
+jenkins_port: 8090
+
+jenkins_params:
+  url_username: "{{jenkins_user}}"
+#  url_password: "{{jenkins_password}}"
+  url: "{{jenkins_url}}"
+  validate_certs: no

@@ -1,0 +1,68 @@
+  - name: Create required directories.
+    become: yes
+    #become_user: "{{ jenkins_job_builder_user_name }}"
+    file:
+      group: "{{ jenkins_job_builder_user_group }}"
+      owner: "{{ jenkins_job_builder_user_name }}"
+      path: "{{ item }}"
+      state: directory
+    with_items:
+      - /etc/jenkins_jobs
+
+  - name: copy jenkins_jobs.ini
+    template: >
+      src=jenkins_jobs.ini.j2
+      dest={{ jenkins_job_builder_template_jenkins_jobs_ini_dest }}
+      mode=0700
+    become: yes
+
+  - name: Create jobs directory.
+    become: yes
+    file:
+      dest: "{{ jenkins_job_builder_file_jobs_dest }}"
+      mode: "{{ jenkins_job_builder_file_jobs_mode }}"
+      state: directory
+
+  - name: Give Sudo access to Jenkins
+    lineinfile:
+      dest: /etc/sudoers
+      line: 'jenkins ALL=(ALL) NOPASSWD: ALL'
+    become: yes
+
+  - meta: flush_handlers
+
+  - name: Check if iTrust job exists
+    become: yes
+    #become_user: jenkins
+    shell: java -jar {{ home_path }}/jenkins-cli.jar -s {{ jenkins_url }} list-jobs
+    register: job_itrust
+    changed_when: "job_itrust.stdout.find('{{ jenkinitrustjobname }}') == -1"
+  
+  - name: Create a jenkins job named iTrustBuildJob using jenkins cli
+    become: yes
+    #become_user: jenkins
+    shell: java -jar "{{ home_path }}"/jenkins-cli.jar -s "{{ jenkins_url }}" create-job "{{ jenkinitrustjobname }}" < "{{ jenkins_job_config_xml_file }}"
+    when: "job_itrust.stdout.find('{{ jenkinitrustjobname }}') == -1"
+
+  - name: Copy code to iTrustBuildJob jenkins job
+    become: true
+    #become_user: jenkins
+    #shell: "cp -p -rf {{ jenkins_job_build_src }} {{ jenkins_jobs_dest }}"
+    shell: "cp -p -rf {{ jenkins_job_build_src }} {{ jenkins_jobs_dest }}/{{ jenkinitrustjobname }}"
+
+  - name: Make sure the iTrust jenkins job has correct user and usergroup assigned
+    become: yes
+    file:  
+      path: "{{ jenkins_jobs_dest }}"
+      owner: jenkins
+      group: jenkins
+      recurse: yes
+
+  - name: Rsync iTrust jenkins jobs configuration.
+    become: yes
+    synchronize:
+      delete: yes
+      dest: "{{ jenkins_job_builder_file_itrustjobs_dest }}"
+      perms: yes
+      src: "{{ jenkins_job_builder_file_itrustjobs_src }}"
+    when: jenkins_job_builder_file_itrustjobs_src != ""

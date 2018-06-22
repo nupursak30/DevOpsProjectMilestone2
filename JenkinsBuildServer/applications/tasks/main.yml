@@ -1,0 +1,4 @@
+---
+- import_tasks: sshSetup.yml
+- import_tasks: CloneRepo.yml
+- import_tasks: configureGit.yml

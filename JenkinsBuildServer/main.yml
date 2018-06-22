@@ -1,0 +1,24 @@
+---
+- name: Jenkins Build Server
+  hosts: localhost #jenkins-server
+  become: yes
+  vars:
+    jenkins_path: /var/lib/jenkins
+    #proxy_env:
+     # MONGO_USER: admin
+  roles:
+     - mysql
+     - mongodb
+#    - node    already present
+     - jenkinsForCoverage
+     - applications
+     - jenkinsJobBuilder
+#    - configuration
+  #vars:
+   # proxy_env:
+    #  http_proxy: http://proxy.example.com:8080
+
+  #tasks:
+
+   # - apt: name=cobbler state=installed
+      #environment: "{{proxy_env}}"

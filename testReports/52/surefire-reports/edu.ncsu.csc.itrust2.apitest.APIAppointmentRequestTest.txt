@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------------
+Test set: edu.ncsu.csc.itrust2.apitest.APIAppointmentRequestTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 0.799 s <<< FAILURE! - in edu.ncsu.csc.itrust2.apitest.APIAppointmentRequestTest
+testAppointmentRequestAPI(edu.ncsu.csc.itrust2.apitest.APIAppointmentRequestTest)  Time elapsed: 0.434 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<200> but was:<409>
+	at edu.ncsu.csc.itrust2.apitest.APIAppointmentRequestTest.testAppointmentRequestAPI(APIAppointmentRequestTest.java:161)
+
+testDeleteNonExistentAppointment(edu.ncsu.csc.itrust2.apitest.APIAppointmentRequestTest)  Time elapsed: 0.028 s  <<< ERROR!
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.lang.NullPointerException
+	at edu.ncsu.csc.itrust2.apitest.APIAppointmentRequestTest.testDeleteNonExistentAppointment(APIAppointmentRequestTest.java:72)
+Caused by: java.lang.NullPointerException
+	at edu.ncsu.csc.itrust2.apitest.APIAppointmentRequestTest.testDeleteNonExistentAppointment(APIAppointmentRequestTest.java:72)
+

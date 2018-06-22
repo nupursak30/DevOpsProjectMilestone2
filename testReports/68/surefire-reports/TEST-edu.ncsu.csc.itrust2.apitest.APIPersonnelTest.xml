@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="edu.ncsu.csc.itrust2.apitest.APIPersonnelTest" time="0.026" tests="2" errors="0" skipped="0" failures="2">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-oracle/jre/lib/amd64"/>
+    <property name="java.vm.version" value="25.161-b12"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=":"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/var/lib/jenkins/workspace/iTrustBuildJob/iTrust2"/>
+    <property name="java.runtime.version" value="1.8.0_161-b12"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="/usr/lib/jvm/java-8-oracle/jre/lib/endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="os.name" value="Linux"/>
+    <property name="classworlds.conf" value="/usr/share/maven/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="3.13.0-139-generic"/>
+    <property name="user.home" value="/root"/>
+    <property name="user.timezone" value="America/New_York"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="user.name" value="root"/>
+    <property name="java.class.path" value="/usr/share/maven/boot/plexus-classworlds-2.x.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="/usr/lib/jvm/java-8-oracle/jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean test verify checkstyle:checkstyle"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_161"/>
+    <property name="java.ext.dirs" value="/usr/lib/jvm/java-8-oracle/jre/lib/ext:/usr/java/packages/lib/ext"/>
+    <property name="securerandom.source" value="file:/dev/./urandom"/>
+    <property name="sun.boot.class.path" value="/usr/lib/jvm/java-8-oracle/jre/lib/resources.jar:/usr/lib/jvm/java-8-oracle/jre/lib/rt.jar:/usr/lib/jvm/java-8-oracle/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jsse.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jce.jar:/usr/lib/jvm/java-8-oracle/jre/lib/charsets.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jfr.jar:/usr/lib/jvm/java-8-oracle/jre/classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="/usr/share/maven"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase name="testGetNonExistentPersonnel" classname="edu.ncsu.csc.itrust2.apitest.APIPersonnelTest" time="0.002">
+    <failure message="Status expected:&lt;404&gt; but was:&lt;200&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Status expected:<404> but was:<200>
+	at edu.ncsu.csc.itrust2.apitest.APIPersonnelTest.testGetNonExistentPersonnel(APIPersonnelTest.java:61)
+]]></failure>
+    <system-out><![CDATA[02:02:57.314 [main] DEBUG o.s.t.c.j.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class edu.ncsu.csc.itrust2.apitest.APIPersonnelTest]
+02:02:57.314 [main] DEBUG o.s.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+02:02:57.314 [main] DEBUG o.s.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+02:02:57.314 [main] DEBUG o.s.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [edu.ncsu.csc.itrust2.apitest.APIPersonnelTest] from class [org.springframework.test.context.web.WebTestContextBootstrapper]
+02:02:57.317 [main] DEBUG o.s.t.c.s.AbstractDelegatingSmartContextLoader - Delegating to AnnotationConfigWebContextLoader to process context configuration [ContextConfigurationAttributes@57d079e5 declaringClass = 'edu.ncsu.csc.itrust2.apitest.APIPersonnelTest', classes = '{class edu.ncsu.csc.itrust2.config.RootConfiguration, class edu.ncsu.csc.itrust2.mvc.config.WebMvcConfiguration}', locations = '{}', inheritLocations = true, initializers = '{}', inheritInitializers = true, name = [null], contextLoaderClass = 'org.springframework.test.context.ContextLoader'].
+02:02:57.326 [main] DEBUG o.s.t.c.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [edu.ncsu.csc.itrust2.apitest.APIPersonnelTest]
+02:02:57.327 [main] DEBUG o.s.t.c.w.WebTestContextBootstrapper - @TestExecutionListeners is not present for class [edu.ncsu.csc.itrust2.apitest.APIPersonnelTest]: using defaults.
+02:02:57.327 [main] INFO  o.s.t.c.w.WebTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+02:02:57.328 [main] INFO  o.s.t.c.w.WebTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@58151738, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@19869120, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@5c7d574c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@360d02a7, org.springframework.test.context.transaction.TransactionalTestExecutionListener@46517f89, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6bf3f9f2, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@5d8204f7]
+02:02:57.328 [main] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [edu.ncsu.csc.itrust2.apitest.APIPersonnelTest]
+02:02:57.328 [main] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [edu.ncsu.csc.itrust2.apitest.APIPersonnelTest]
+02:02:57.328 [main] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [edu.ncsu.csc.itrust2.apitest.APIPersonnelTest]
+02:02:57.328 [main] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [edu.ncsu.csc.itrust2.apitest.APIPersonnelTest]
+02:02:57.328 [main] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [edu.ncsu.csc.itrust2.apitest.APIPersonnelTest]
+02:02:57.328 [main] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [edu.ncsu.csc.itrust2.apitest.APIPersonnelTest]
+02:02:57.328 [main] DEBUG o.s.t.c.s.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@3c43dda testClass = APIPersonnelTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@4e24b71c testClass = APIPersonnelTest, locations = '{}', classes = '{class edu.ncsu.csc.itrust2.config.RootConfiguration, class edu.ncsu.csc.itrust2.mvc.config.WebMvcConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]]], class annotated with @DirtiesContext [false] with mode [null].
+02:02:57.328 [main] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [edu.ncsu.csc.itrust2.apitest.APIPersonnelTest]
+02:02:57.328 [main] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [edu.ncsu.csc.itrust2.apitest.APIPersonnelTest]
+02:02:57.329 [main] DEBUG o.s.t.c.c.DefaultCacheAwareContextLoaderDelegate - Retrieved ApplicationContext from cache with key [[WebMergedContextConfiguration@4e24b71c testClass = APIPersonnelTest, locations = '{}', classes = '{class edu.ncsu.csc.itrust2.config.RootConfiguration, class edu.ncsu.csc.itrust2.mvc.config.WebMvcConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]]]
+02:02:57.329 [main] DEBUG o.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@42bfc11f size = 1, maxSize = 32, parentContextCount = 0, hitCount = 26, missCount = 1]
+02:02:57.329 [main] DEBUG o.s.t.c.w.ServletTestExecutionListener - Setting up MockHttpServletRequest, MockHttpServletResponse, ServletWebRequest, and RequestContextHolder for test context [DefaultTestContext@3c43dda testClass = APIPersonnelTest, testInstance = edu.ncsu.csc.itrust2.apitest.APIPersonnelTest@3aecfb43, testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@4e24b71c testClass = APIPersonnelTest, locations = '{}', classes = '{class edu.ncsu.csc.itrust2.config.RootConfiguration, class edu.ncsu.csc.itrust2.mvc.config.WebMvcConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]]].
+02:02:57.329 [main] DEBUG o.s.t.c.s.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[DefaultTestContext@3c43dda testClass = APIPersonnelTest, testInstance = edu.ncsu.csc.itrust2.apitest.APIPersonnelTest@3aecfb43, testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@4e24b71c testClass = APIPersonnelTest, locations = '{}', classes = '{class edu.ncsu.csc.itrust2.config.RootConfiguration, class edu.ncsu.csc.itrust2.mvc.config.WebMvcConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]]]].
+02:02:57.329 [main] DEBUG o.s.t.c.c.DefaultCacheAwareContextLoaderDelegate - Retrieved ApplicationContext from cache with key [[WebMergedContextConfiguration@4e24b71c testClass = APIPersonnelTest, locations = '{}', classes = '{class edu.ncsu.csc.itrust2.config.RootConfiguration, class edu.ncsu.csc.itrust2.mvc.config.WebMvcConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]]]
+02:02:57.329 [main] DEBUG o.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@42bfc11f size = 1, maxSize = 32, parentContextCount = 0, hitCount = 27, missCount = 1]
+02:02:57.335 [main] DEBUG o.s.b.f.annotation.InjectionMetadata - Processing injected element of bean 'edu.ncsu.csc.itrust2.apitest.APIPersonnelTest': AutowiredFieldElement for private org.springframework.web.context.WebApplicationContext edu.ncsu.csc.itrust2.apitest.APIPersonnelTest.context
+02:02:57.335 [main] DEBUG o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - Autowiring by type from bean name 'edu.ncsu.csc.itrust2.apitest.APIPersonnelTest' to bean named 'org.springframework.web.context.support.GenericWebApplicationContext@599e4d41'
+02:02:57.335 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'metaDataSourceAdvisor'
+02:02:57.336 [main] DEBUG o.s.t.c.s.AbstractDirtiesContextTestExecutionListener - Before test method: context [DefaultTestContext@3c43dda testClass = APIPersonnelTest, testInstance = edu.ncsu.csc.itrust2.apitest.APIPersonnelTest@3aecfb43, testMethod = testGetNonExistentPersonnel@APIPersonnelTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@4e24b71c testClass = APIPersonnelTest, locations = '{}', classes = '{class edu.ncsu.csc.itrust2.config.RootConfiguration, class edu.ncsu.csc.itrust2.mvc.config.WebMvcConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]]], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null].
+02:02:57.336 [main] DEBUG o.s.t.w.s.TestDispatcherServlet - Initializing servlet ''
+02:02:57.336 [main] DEBUG o.s.w.c.s.StandardServletEnvironment - Adding [servletConfigInitParams] PropertySource with lowest search precedence
+02:02:57.336 [main] DEBUG o.s.w.c.s.StandardServletEnvironment - Adding [servletContextInitParams] PropertySource with lowest search precedence
+02:02:57.337 [main] DEBUG o.s.w.c.s.StandardServletEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+02:02:57.337 [main] DEBUG o.s.w.c.s.StandardServletEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+02:02:57.337 [main] DEBUG o.s.w.c.s.StandardServletEnvironment - Initialized StandardServletEnvironment with PropertySources [servletConfigInitParams,servletContextInitParams,systemProperties,systemEnvironment]
+02:02:57.337 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring FrameworkServlet ''
+02:02:57.337 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization started
+02:02:57.337 [main] DEBUG o.s.t.w.s.TestDispatcherServlet - Unable to locate MultipartResolver with name 'multipartResolver': no multipart request handling provided
+02:02:57.337 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver'
+02:02:57.337 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver'
+02:02:57.337 [main] DEBUG o.s.t.w.s.TestDispatcherServlet - Unable to locate LocaleResolver with name 'localeResolver': using default [org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver@550c3c92]
+02:02:57.337 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.web.servlet.theme.FixedThemeResolver'
+02:02:57.337 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.web.servlet.theme.FixedThemeResolver'
+02:02:57.337 [main] DEBUG o.s.t.w.s.TestDispatcherServlet - Unable to locate ThemeResolver with name 'themeResolver': using default [org.springframework.web.servlet.theme.FixedThemeResolver@3e7bfd78]
+02:02:57.338 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'resourceHandlerMapping'
+02:02:57.338 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'defaultServletHandlerMapping'
+02:02:57.350 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'requestMappingHandlerMapping'
+02:02:57.350 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'viewControllerHandlerMapping'
+02:02:57.350 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'beanNameHandlerMapping'
+02:02:57.350 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'requestMappingHandlerAdapter'
+02:02:57.350 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'httpRequestHandlerAdapter'
+02:02:57.350 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'simpleControllerHandlerAdapter'
+02:02:57.351 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'handlerExceptionResolver'
+02:02:57.364 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator'
+02:02:57.364 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator'
+02:02:57.364 [main] DEBUG o.s.t.w.s.TestDispatcherServlet - Unable to locate RequestToViewNameTranslator with name 'viewNameTranslator': using default [org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@63103f17]
+02:02:57.365 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'mvcViewResolver'
+02:02:57.365 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'viewResolver'
+02:02:57.365 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.web.servlet.support.SessionFlashMapManager'
+02:02:57.365 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.web.servlet.support.SessionFlashMapManager'
+02:02:57.365 [main] DEBUG o.s.t.w.s.TestDispatcherServlet - Unable to locate FlashMapManager with name 'flashMapManager': using default [org.springframework.web.servlet.support.SessionFlashMapManager@336ec06d]
+02:02:57.365 [main] DEBUG o.s.t.w.s.TestDispatcherServlet - Published WebApplicationContext of servlet '' as ServletContext attribute with name [org.springframework.web.servlet.FrameworkServlet.CONTEXT.]
+02:02:57.365 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization completed in 28 ms
+02:02:57.365 [main] DEBUG o.s.t.w.s.TestDispatcherServlet - Servlet '' configured successfully
+02:02:57.366 [main] DEBUG o.s.t.w.s.TestDispatcherServlet - DispatcherServlet with name '' processing GET request for [/api/v1/personnel/-1]
+02:02:57.366 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Looking up handler method for path /api/v1/personnel/-1
+02:02:57.366 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Returning handler method [public org.springframework.http.ResponseEntity edu.ncsu.csc.itrust2.controllers.api.APIPersonnelController.getPersonnel(java.lang.String)]
+02:02:57.367 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'APIPersonnelController'
+02:02:57.367 [main] DEBUG o.s.t.w.s.TestDispatcherServlet - Last-Modified value for [/api/v1/personnel/-1] is: -1
+02:02:57.375 [main] DEBUG o.h.e.t.internal.TransactionImpl - begin
+02:02:57.385 [main] DEBUG org.hibernate.SQL - select this_.username as username1_15_0_, this_.enabled as enabled2_15_0_, this_.password as password3_15_0_, this_.role as role4_15_0_ from Users this_ where this_.username=?
+Hibernate: select this_.username as username1_15_0_, this_.enabled as enabled2_15_0_, this_.password as password3_15_0_, this_.role as role4_15_0_ from Users this_ where this_.username=?
+02:02:57.395 [main] DEBUG o.h.e.t.internal.TransactionImpl - committing
+02:02:57.395 [main] DEBUG o.h.e.t.internal.TransactionImpl - begin
+02:02:57.396 [main] DEBUG org.hibernate.SQL - select this_.id as id1_13_1_, this_.address1 as address2_13_1_, this_.address2 as address3_13_1_, this_.city as city4_13_1_, this_.email as email5_13_1_, this_.enabled as enabled6_13_1_, this_.firstName as firstNam7_13_1_, this_.lastName as lastName8_13_1_, this_.phone as phone9_13_1_, this_.self_id as self_id13_13_1_, this_.specialty as special10_13_1_, this_.state as state11_13_1_, this_.zip as zip12_13_1_, user2_.username as username1_15_0_, user2_.enabled as enabled2_15_0_, user2_.password as password3_15_0_, user2_.role as role4_15_0_ from Personnel this_ left outer join Users user2_ on this_.self_id=user2_.username where this_.self_id=?
+Hibernate: select this_.id as id1_13_1_, this_.address1 as address2_13_1_, this_.address2 as address3_13_1_, this_.city as city4_13_1_, this_.email as email5_13_1_, this_.enabled as enabled6_13_1_, this_.firstName as firstNam7_13_1_, this_.lastName as lastName8_13_1_, this_.phone as phone9_13_1_, this_.self_id as self_id13_13_1_, this_.specialty as special10_13_1_, this_.state as state11_13_1_, this_.zip as zip12_13_1_, user2_.username as username1_15_0_, user2_.enabled as enabled2_15_0_, user2_.password as password3_15_0_, user2_.role as role4_15_0_ from Personnel this_ left outer join Users user2_ on this_.self_id=user2_.username where this_.self_id=?
+02:02:57.402 [main] DEBUG o.h.e.t.internal.TransactionImpl - committing
+02:02:57.403 [main] DEBUG o.h.e.t.internal.TransactionImpl - begin
+02:02:57.414 [main] DEBUG org.hibernate.SQL - select next_val as id_val from hibernate_sequence for update
+Hibernate: select next_val as id_val from hibernate_sequence for update
+02:02:57.415 [main] DEBUG org.hibernate.SQL - update hibernate_sequence set next_val= ? where next_val=?
+Hibernate: update hibernate_sequence set next_val= ? where next_val=?
+02:02:57.418 [main] DEBUG o.h.e.i.AbstractSaveEventListener - Generated identifier: 37, using strategy: org.hibernate.id.enhanced.SequenceStyleGenerator
+02:02:57.418 [main] DEBUG o.h.e.t.internal.TransactionImpl - committing
+02:02:57.418 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Processing flush-time cascades
+02:02:57.418 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Dirty checking collections
+02:02:57.418 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Flushed: 1 insertions, 0 updates, 0 deletions to 1 objects
+02:02:57.418 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+02:02:57.418 [main] DEBUG o.h.internal.util.EntityPrinter - Listing entities:
+02:02:57.419 [main] DEBUG o.h.internal.util.EntityPrinter - edu.ncsu.csc.itrust2.models.persistent.LogEntry{secondaryUser=null, logCode=12, primaryUser=SPRING_API_TEST_USER, id=37, time=java.util.GregorianCalendar[time=1521698577403,areFieldsSet=true,areAllFieldsSet=true,lenient=true,zone=sun.util.calendar.ZoneInfo[id="America/New_York",offset=-18000000,dstSavings=3600000,useDaylight=true,transitions=235,lastRule=java.util.SimpleTimeZone[id=America/New_York,offset=-18000000,dstSavings=3600000,useDaylight=true,startYear=0,startMode=3,startMonth=2,startDay=8,startDayOfWeek=1,startTime=7200000,startTimeMode=0,endMode=3,endMonth=10,endDay=1,endDayOfWeek=1,endTime=7200000,endTimeMode=0]],firstDayOfWeek=1,minimalDaysInFirstWeek=1,ERA=1,YEAR=2018,MONTH=2,WEEK_OF_YEAR=12,WEEK_OF_MONTH=4,DAY_OF_MONTH=22,DAY_OF_YEAR=81,DAY_OF_WEEK=5,DAY_OF_WEEK_IN_MONTH=4,AM_PM=0,HOUR=2,HOUR_OF_DAY=2,MINUTE=2,SECOND=57,MILLISECOND=403,ZONE_OFFSET=-18000000,DST_OFFSET=3600000], message=null}
+02:02:57.419 [main] DEBUG org.hibernate.SQL - insert into LogEntries (logCode, message, primaryUser, secondaryUser, time, id) values (?, ?, ?, ?, ?, ?)
+Hibernate: insert into LogEntries (logCode, message, primaryUser, secondaryUser, time, id) values (?, ?, ?, ?, ?, ?)
+02:02:57.441 [main] DEBUG o.h.e.j.internal.JdbcCoordinatorImpl - HHH000420: Closing un-released batch
+02:02:57.442 [main] DEBUG o.s.t.w.s.TestDispatcherServlet - Null ModelAndView returned to DispatcherServlet with name '': assuming HandlerAdapter completed request handling
+02:02:57.442 [main] DEBUG o.s.t.w.s.TestDispatcherServlet - Successfully completed request
+02:02:57.442 [main] DEBUG o.s.t.c.s.AbstractDirtiesContextTestExecutionListener - After test method: context [DefaultTestContext@3c43dda testClass = APIPersonnelTest, testInstance = edu.ncsu.csc.itrust2.apitest.APIPersonnelTest@3aecfb43, testMethod = testGetNonExistentPersonnel@APIPersonnelTest, testException = java.lang.AssertionError: Status expected:<404> but was:<200>, mergedContextConfiguration = [WebMergedContextConfiguration@4e24b71c testClass = APIPersonnelTest, locations = '{}', classes = '{class edu.ncsu.csc.itrust2.config.RootConfiguration, class edu.ncsu.csc.itrust2.mvc.config.WebMvcConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]]], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null].
+02:02:57.442 [main] DEBUG o.s.t.c.w.ServletTestExecutionListener - Resetting RequestContextHolder for test context [DefaultTestContext@3c43dda testClass = APIPersonnelTest, testInstance = edu.ncsu.csc.itrust2.apitest.APIPersonnelTest@3aecfb43, testMethod = testGetNonExistentPersonnel@APIPersonnelTest, testException = java.lang.AssertionError: Status expected:<404> but was:<200>, mergedContextConfiguration = [WebMergedContextConfiguration@4e24b71c testClass = APIPersonnelTest, locations = '{}', classes = '{class edu.ncsu.csc.itrust2.config.RootConfiguration, class edu.ncsu.csc.itrust2.mvc.config.WebMvcConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]]].
+]]></system-out>
+  </testcase>
+  <testcase name="testPersonnelAPI" classname="edu.ncsu.csc.itrust2.apitest.APIPersonnelTest" time="0.013">
+    <failure message="Status expected:&lt;200&gt; but was:&lt;404&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Status expected:<200> but was:<404>
+	at edu.ncsu.csc.itrust2.apitest.APIPersonnelTest.testPersonnelAPI(APIPersonnelTest.java:100)
+]]></failure>
+    <system-out><![CDATA[02:02:57.443 [main] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [edu.ncsu.csc.itrust2.apitest.APIPersonnelTest]
+02:02:57.443 [main] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [edu.ncsu.csc.itrust2.apitest.APIPersonnelTest]
+02:02:57.443 [main] DEBUG o.s.t.c.c.DefaultCacheAwareContextLoaderDelegate - Retrieved ApplicationContext from cache with key [[WebMergedContextConfiguration@4e24b71c testClass = APIPersonnelTest, locations = '{}', classes = '{class edu.ncsu.csc.itrust2.config.RootConfiguration, class edu.ncsu.csc.itrust2.mvc.config.WebMvcConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]]]
+02:02:57.443 [main] DEBUG o.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@42bfc11f size = 1, maxSize = 32, parentContextCount = 0, hitCount = 28, missCount = 1]
+02:02:57.443 [main] DEBUG o.s.t.c.w.ServletTestExecutionListener - Setting up MockHttpServletRequest, MockHttpServletResponse, ServletWebRequest, and RequestContextHolder for test context [DefaultTestContext@3c43dda testClass = APIPersonnelTest, testInstance = edu.ncsu.csc.itrust2.apitest.APIPersonnelTest@1c320505, testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@4e24b71c testClass = APIPersonnelTest, locations = '{}', classes = '{class edu.ncsu.csc.itrust2.config.RootConfiguration, class edu.ncsu.csc.itrust2.mvc.config.WebMvcConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]]].
+02:02:57.443 [main] DEBUG o.s.t.c.s.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[DefaultTestContext@3c43dda testClass = APIPersonnelTest, testInstance = edu.ncsu.csc.itrust2.apitest.APIPersonnelTest@1c320505, testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@4e24b71c testClass = APIPersonnelTest, locations = '{}', classes = '{class edu.ncsu.csc.itrust2.config.RootConfiguration, class edu.ncsu.csc.itrust2.mvc.config.WebMvcConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]]]].
+02:02:57.443 [main] DEBUG o.s.t.c.c.DefaultCacheAwareContextLoaderDelegate - Retrieved ApplicationContext from cache with key [[WebMergedContextConfiguration@4e24b71c testClass = APIPersonnelTest, locations = '{}', classes = '{class edu.ncsu.csc.itrust2.config.RootConfiguration, class edu.ncsu.csc.itrust2.mvc.config.WebMvcConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]]]
+02:02:57.443 [main] DEBUG o.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@42bfc11f size = 1, maxSize = 32, parentContextCount = 0, hitCount = 29, missCount = 1]
+02:02:57.443 [main] DEBUG o.s.b.f.annotation.InjectionMetadata - Processing injected element of bean 'edu.ncsu.csc.itrust2.apitest.APIPersonnelTest': AutowiredFieldElement for private org.springframework.web.context.WebApplicationContext edu.ncsu.csc.itrust2.apitest.APIPersonnelTest.context
+02:02:57.444 [main] DEBUG o.s.t.c.s.AbstractDirtiesContextTestExecutionListener - Before test method: context [DefaultTestContext@3c43dda testClass = APIPersonnelTest, testInstance = edu.ncsu.csc.itrust2.apitest.APIPersonnelTest@1c320505, testMethod = testPersonnelAPI@APIPersonnelTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@4e24b71c testClass = APIPersonnelTest, locations = '{}', classes = '{class edu.ncsu.csc.itrust2.config.RootConfiguration, class edu.ncsu.csc.itrust2.mvc.config.WebMvcConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]]], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null].
+02:02:57.444 [main] DEBUG o.s.t.w.s.TestDispatcherServlet - Initializing servlet ''
+02:02:57.444 [main] DEBUG o.s.w.c.s.StandardServletEnvironment - Adding [servletConfigInitParams] PropertySource with lowest search precedence
+02:02:57.444 [main] DEBUG o.s.w.c.s.StandardServletEnvironment - Adding [servletContextInitParams] PropertySource with lowest search precedence
+02:02:57.444 [main] DEBUG o.s.w.c.s.StandardServletEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+02:02:57.444 [main] DEBUG o.s.w.c.s.StandardServletEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+02:02:57.444 [main] DEBUG o.s.w.c.s.StandardServletEnvironment - Initialized StandardServletEnvironment with PropertySources [servletConfigInitParams,servletContextInitParams,systemProperties,systemEnvironment]
+02:02:57.445 [main] INFO  o.s.mock.web.MockServletContext - Initializing Spring FrameworkServlet ''
+02:02:57.445 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization started
+02:02:57.445 [main] DEBUG o.s.t.w.s.TestDispatcherServlet - Unable to locate MultipartResolver with name 'multipartResolver': no multipart request handling provided
+02:02:57.445 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver'
+02:02:57.445 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver'
+02:02:57.445 [main] DEBUG o.s.t.w.s.TestDispatcherServlet - Unable to locate LocaleResolver with name 'localeResolver': using default [org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver@4510c549]
+02:02:57.445 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.web.servlet.theme.FixedThemeResolver'
+02:02:57.445 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.web.servlet.theme.FixedThemeResolver'
+02:02:57.445 [main] DEBUG o.s.t.w.s.TestDispatcherServlet - Unable to locate ThemeResolver with name 'themeResolver': using default [org.springframework.web.servlet.theme.FixedThemeResolver@65c10808]
+02:02:57.446 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'resourceHandlerMapping'
+02:02:57.446 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'defaultServletHandlerMapping'
+02:02:57.446 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'requestMappingHandlerMapping'
+02:02:57.446 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'viewControllerHandlerMapping'
+02:02:57.446 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'beanNameHandlerMapping'
+02:02:57.454 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'requestMappingHandlerAdapter'
+02:02:57.454 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'httpRequestHandlerAdapter'
+02:02:57.454 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'simpleControllerHandlerAdapter'
+02:02:57.454 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'handlerExceptionResolver'
+02:02:57.455 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator'
+02:02:57.455 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator'
+02:02:57.455 [main] DEBUG o.s.t.w.s.TestDispatcherServlet - Unable to locate RequestToViewNameTranslator with name 'viewNameTranslator': using default [org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@69d73398]
+02:02:57.455 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'mvcViewResolver'
+02:02:57.455 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'viewResolver'
+02:02:57.455 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.web.servlet.support.SessionFlashMapManager'
+02:02:57.455 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.web.servlet.support.SessionFlashMapManager'
+02:02:57.455 [main] DEBUG o.s.t.w.s.TestDispatcherServlet - Unable to locate FlashMapManager with name 'flashMapManager': using default [org.springframework.web.servlet.support.SessionFlashMapManager@6598af15]
+02:02:57.455 [main] DEBUG o.s.t.w.s.TestDispatcherServlet - Published WebApplicationContext of servlet '' as ServletContext attribute with name [org.springframework.web.servlet.FrameworkServlet.CONTEXT.]
+02:02:57.455 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization completed in 10 ms
+02:02:57.456 [main] DEBUG o.s.t.w.s.TestDispatcherServlet - Servlet '' configured successfully
+02:02:57.471 [main] DEBUG o.s.t.w.s.TestDispatcherServlet - DispatcherServlet with name '' processing DELETE request for [/api/v1/personnel]
+02:02:57.471 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Looking up handler method for path /api/v1/personnel
+02:02:57.473 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolving exception from handler [null]: org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'DELETE' not supported
+02:02:57.473 [main] DEBUG o.s.w.s.m.a.ResponseStatusExceptionResolver - Resolving exception from handler [null]: org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'DELETE' not supported
+02:02:57.473 [main] DEBUG o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolving exception from handler [null]: org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'DELETE' not supported
+02:02:57.473 [main] WARN  o.s.web.servlet.PageNotFound - Request method 'DELETE' not supported
+02:02:57.473 [main] DEBUG o.s.t.w.s.TestDispatcherServlet - Null ModelAndView returned to DispatcherServlet with name '': assuming HandlerAdapter completed request handling
+02:02:57.473 [main] DEBUG o.s.t.w.s.TestDispatcherServlet - Successfully completed request
+02:02:57.474 [main] DEBUG o.s.t.w.s.TestDispatcherServlet - DispatcherServlet with name '' processing POST request for [/api/v1/users]
+02:02:57.474 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Looking up handler method for path /api/v1/users
+02:02:57.475 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Returning handler method [public org.springframework.http.ResponseEntity edu.ncsu.csc.itrust2.controllers.api.APIUserController.createUser(edu.ncsu.csc.itrust2.forms.admin.UserForm)]
+02:02:57.475 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'APIUserController'
+02:02:57.476 [main] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read [class edu.ncsu.csc.itrust2.forms.admin.UserForm] as "application/json" with [org.springframework.http.converter.json.GsonHttpMessageConverter@5bf93671]
+02:02:57.732 [main] DEBUG o.h.e.t.internal.TransactionImpl - begin
+02:02:57.733 [main] DEBUG org.hibernate.SQL - select this_.username as username1_15_0_, this_.enabled as enabled2_15_0_, this_.password as password3_15_0_, this_.role as role4_15_0_ from Users this_ where this_.username=?
+Hibernate: select this_.username as username1_15_0_, this_.enabled as enabled2_15_0_, this_.password as password3_15_0_, this_.role as role4_15_0_ from Users this_ where this_.username=?
+02:02:57.734 [main] DEBUG org.hibernate.loader.Loader - Result set row: 0
+02:02:57.734 [main] DEBUG org.hibernate.loader.Loader - Result row: EntityKey[edu.ncsu.csc.itrust2.models.persistent.User#hcp]
+02:02:57.735 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Resolving associations for [edu.ncsu.csc.itrust2.models.persistent.User#hcp]
+02:02:57.738 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Done materializing entity [edu.ncsu.csc.itrust2.models.persistent.User#hcp]
+02:02:57.738 [main] DEBUG o.h.e.t.internal.TransactionImpl - committing
+02:02:57.738 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Processing flush-time cascades
+02:02:57.738 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Dirty checking collections
+02:02:57.739 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+02:02:57.739 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+02:02:57.739 [main] DEBUG o.h.internal.util.EntityPrinter - Listing entities:
+02:02:57.742 [main] DEBUG o.h.internal.util.EntityPrinter - edu.ncsu.csc.itrust2.models.persistent.User{password=$2a$10$VzO0tHxu/MCWNPv1U5OtpO3CxHh57TzPjVU1um.UBUQrZqNocJ2zq, role=ROLE_HCP, enabled=1, username=hcp}
+02:02:57.743 [main] DEBUG o.h.e.t.internal.TransactionImpl - begin
+02:02:57.750 [main] DEBUG org.hibernate.SQL - select user_.username, user_.enabled as enabled2_15_, user_.password as password3_15_, user_.role as role4_15_ from Users user_ where user_.username=?
+Hibernate: select user_.username, user_.enabled as enabled2_15_, user_.password as password3_15_, user_.role as role4_15_ from Users user_ where user_.username=?
+02:02:57.752 [main] DEBUG o.h.r.j.i.ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
+02:02:57.752 [main] DEBUG o.h.e.t.internal.TransactionImpl - committing
+02:02:57.752 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Processing flush-time cascades
+02:02:57.752 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Dirty checking collections
+02:02:57.752 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Flushed: 0 insertions, 1 updates, 0 deletions to 1 objects
+02:02:57.753 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+02:02:57.753 [main] DEBUG o.h.internal.util.EntityPrinter - Listing entities:
+02:02:57.753 [main] DEBUG o.h.internal.util.EntityPrinter - edu.ncsu.csc.itrust2.models.persistent.User{password=$2a$10$NxODd4nKMvHGSZSwQSVaauDdykvjgAVocIOginnv6jUZMPKPrCL32, role=ROLE_HCP, enabled=1, username=hcp}
+02:02:57.755 [main] DEBUG org.hibernate.SQL - update Users set enabled=?, password=?, role=? where username=?
+Hibernate: update Users set enabled=?, password=?, role=? where username=?
+02:02:57.760 [main] DEBUG o.h.e.j.internal.JdbcCoordinatorImpl - HHH000420: Closing un-released batch
+02:02:57.761 [main] DEBUG o.h.e.t.internal.TransactionImpl - begin
+02:02:57.761 [main] DEBUG org.hibernate.SQL - select next_val as id_val from hibernate_sequence for update
+Hibernate: select next_val as id_val from hibernate_sequence for update
+02:02:57.762 [main] DEBUG org.hibernate.SQL - update hibernate_sequence set next_val= ? where next_val=?
+Hibernate: update hibernate_sequence set next_val= ? where next_val=?
+02:02:57.771 [main] DEBUG o.h.e.i.AbstractSaveEventListener - Generated identifier: 38, using strategy: org.hibernate.id.enhanced.SequenceStyleGenerator
+02:02:57.772 [main] DEBUG o.h.e.t.internal.TransactionImpl - committing
+02:02:57.772 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Processing flush-time cascades
+02:02:57.772 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Dirty checking collections
+02:02:57.772 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Flushed: 1 insertions, 0 updates, 0 deletions to 1 objects
+02:02:57.772 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+02:02:57.772 [main] DEBUG o.h.internal.util.EntityPrinter - Listing entities:
+02:02:57.772 [main] DEBUG o.h.internal.util.EntityPrinter - edu.ncsu.csc.itrust2.models.persistent.LogEntry{secondaryUser=null, logCode=7, primaryUser=SPRING_API_TEST_USER, id=38, time=java.util.GregorianCalendar[time=1521698577760,areFieldsSet=true,areAllFieldsSet=true,lenient=true,zone=sun.util.calendar.ZoneInfo[id="America/New_York",offset=-18000000,dstSavings=3600000,useDaylight=true,transitions=235,lastRule=java.util.SimpleTimeZone[id=America/New_York,offset=-18000000,dstSavings=3600000,useDaylight=true,startYear=0,startMode=3,startMonth=2,startDay=8,startDayOfWeek=1,startTime=7200000,startTimeMode=0,endMode=3,endMonth=10,endDay=1,endDayOfWeek=1,endTime=7200000,endTimeMode=0]],firstDayOfWeek=1,minimalDaysInFirstWeek=1,ERA=1,YEAR=2018,MONTH=2,WEEK_OF_YEAR=12,WEEK_OF_MONTH=4,DAY_OF_MONTH=22,DAY_OF_YEAR=81,DAY_OF_WEEK=5,DAY_OF_WEEK_IN_MONTH=4,AM_PM=0,HOUR=2,HOUR_OF_DAY=2,MINUTE=2,SECOND=57,MILLISECOND=760,ZONE_OFFSET=-18000000,DST_OFFSET=3600000], message=null}
+02:02:57.773 [main] DEBUG org.hibernate.SQL - insert into LogEntries (logCode, message, primaryUser, secondaryUser, time, id) values (?, ?, ?, ?, ?, ?)
+Hibernate: insert into LogEntries (logCode, message, primaryUser, secondaryUser, time, id) values (?, ?, ?, ?, ?, ?)
+02:02:57.776 [main] DEBUG o.h.e.j.internal.JdbcCoordinatorImpl - HHH000420: Closing un-released batch
+02:02:57.777 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Written [edu.ncsu.csc.itrust2.models.persistent.User@2051ff2a] as "application/json" using [org.springframework.http.converter.json.GsonHttpMessageConverter@5bf93671]
+02:02:57.777 [main] DEBUG o.s.t.w.s.TestDispatcherServlet - Null ModelAndView returned to DispatcherServlet with name '': assuming HandlerAdapter completed request handling
+02:02:57.777 [main] DEBUG o.s.t.w.s.TestDispatcherServlet - Successfully completed request
+02:02:57.783 [main] DEBUG o.s.t.w.s.TestDispatcherServlet - DispatcherServlet with name '' processing POST request for [/api/v1/personnel]
+02:02:57.783 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Looking up handler method for path /api/v1/personnel
+02:02:57.784 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Returning handler method [public org.springframework.http.ResponseEntity edu.ncsu.csc.itrust2.controllers.api.APIPersonnelController.createPersonnel(edu.ncsu.csc.itrust2.forms.personnel.PersonnelForm)]
+02:02:57.784 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'APIPersonnelController'
+02:02:57.784 [main] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read [class edu.ncsu.csc.itrust2.forms.personnel.PersonnelForm] as "application/json" with [org.springframework.http.converter.json.GsonHttpMessageConverter@5bf93671]
+02:02:57.785 [main] DEBUG o.h.e.t.internal.TransactionImpl - begin
+02:02:57.799 [main] DEBUG org.hibernate.SQL - select this_.username as username1_15_0_, this_.enabled as enabled2_15_0_, this_.password as password3_15_0_, this_.role as role4_15_0_ from Users this_ where this_.username=?
+Hibernate: select this_.username as username1_15_0_, this_.enabled as enabled2_15_0_, this_.password as password3_15_0_, this_.role as role4_15_0_ from Users this_ where this_.username=?
+02:02:57.800 [main] DEBUG org.hibernate.loader.Loader - Result set row: 0
+02:02:57.800 [main] DEBUG org.hibernate.loader.Loader - Result row: EntityKey[edu.ncsu.csc.itrust2.models.persistent.User#hcp]
+02:02:57.803 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Resolving associations for [edu.ncsu.csc.itrust2.models.persistent.User#hcp]
+02:02:57.803 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Done materializing entity [edu.ncsu.csc.itrust2.models.persistent.User#hcp]
+02:02:57.803 [main] DEBUG o.h.e.t.internal.TransactionImpl - committing
+02:02:57.803 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Processing flush-time cascades
+02:02:57.803 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Dirty checking collections
+02:02:57.804 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+02:02:57.804 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+02:02:57.804 [main] DEBUG o.h.internal.util.EntityPrinter - Listing entities:
+02:02:57.804 [main] DEBUG o.h.internal.util.EntityPrinter - edu.ncsu.csc.itrust2.models.persistent.User{password=$2a$10$NxODd4nKMvHGSZSwQSVaauDdykvjgAVocIOginnv6jUZMPKPrCL32, role=ROLE_HCP, enabled=1, username=hcp}
+02:02:57.805 [main] DEBUG o.h.e.t.internal.TransactionImpl - begin
+02:02:57.805 [main] DEBUG org.hibernate.SQL - select this_.id as id1_13_1_, this_.address1 as address2_13_1_, this_.address2 as address3_13_1_, this_.city as city4_13_1_, this_.email as email5_13_1_, this_.enabled as enabled6_13_1_, this_.firstName as firstNam7_13_1_, this_.lastName as lastName8_13_1_, this_.phone as phone9_13_1_, this_.self_id as self_id13_13_1_, this_.specialty as special10_13_1_, this_.state as state11_13_1_, this_.zip as zip12_13_1_, user2_.username as username1_15_0_, user2_.enabled as enabled2_15_0_, user2_.password as password3_15_0_, user2_.role as role4_15_0_ from Personnel this_ left outer join Users user2_ on this_.self_id=user2_.username where this_.self_id=?
+Hibernate: select this_.id as id1_13_1_, this_.address1 as address2_13_1_, this_.address2 as address3_13_1_, this_.city as city4_13_1_, this_.email as email5_13_1_, this_.enabled as enabled6_13_1_, this_.firstName as firstNam7_13_1_, this_.lastName as lastName8_13_1_, this_.phone as phone9_13_1_, this_.self_id as self_id13_13_1_, this_.specialty as special10_13_1_, this_.state as state11_13_1_, this_.zip as zip12_13_1_, user2_.username as username1_15_0_, user2_.enabled as enabled2_15_0_, user2_.password as password3_15_0_, user2_.role as role4_15_0_ from Personnel this_ left outer join Users user2_ on this_.self_id=user2_.username where this_.self_id=?
+02:02:57.810 [main] DEBUG org.hibernate.loader.Loader - Result set row: 0
+02:02:57.810 [main] DEBUG org.hibernate.loader.Loader - Result row: EntityKey[edu.ncsu.csc.itrust2.models.persistent.User#hcp], EntityKey[edu.ncsu.csc.itrust2.models.persistent.Personnel#1]
+02:02:57.811 [main] DEBUG org.hibernate.loader.Loader - Result set row: 1
+02:02:57.811 [main] DEBUG org.hibernate.loader.Loader - Result row: EntityKey[edu.ncsu.csc.itrust2.models.persistent.User#hcp], EntityKey[edu.ncsu.csc.itrust2.models.persistent.Personnel#2]
+02:02:57.811 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Resolving associations for [edu.ncsu.csc.itrust2.models.persistent.User#hcp]
+02:02:57.811 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Done materializing entity [edu.ncsu.csc.itrust2.models.persistent.User#hcp]
+02:02:57.811 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Resolving associations for [edu.ncsu.csc.itrust2.models.persistent.Personnel#1]
+02:02:57.812 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Done materializing entity [edu.ncsu.csc.itrust2.models.persistent.Personnel#1]
+02:02:57.812 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Resolving associations for [edu.ncsu.csc.itrust2.models.persistent.Personnel#2]
+02:02:57.812 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Done materializing entity [edu.ncsu.csc.itrust2.models.persistent.Personnel#2]
+02:02:57.812 [main] DEBUG o.h.e.t.internal.TransactionImpl - committing
+02:02:57.812 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Processing flush-time cascades
+02:02:57.812 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Dirty checking collections
+02:02:57.812 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 3 objects
+02:02:57.812 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+02:02:57.812 [main] DEBUG o.h.internal.util.EntityPrinter - Listing entities:
+02:02:57.813 [main] DEBUG o.h.internal.util.EntityPrinter - edu.ncsu.csc.itrust2.models.persistent.User{password=$2a$10$NxODd4nKMvHGSZSwQSVaauDdykvjgAVocIOginnv6jUZMPKPrCL32, role=ROLE_HCP, enabled=1, username=hcp}
+02:02:57.813 [main] DEBUG o.h.internal.util.EntityPrinter - edu.ncsu.csc.itrust2.models.persistent.Personnel{zip=12345, lastName=HCP, specialty=null, address2=null, city=town, address1=1234 Road St., enabled=null, firstName=HCP, phone=111-222-3333, self=edu.ncsu.csc.itrust2.models.persistent.User#hcp, id=1, state=AK, email=csc326.201.1@gmail.com}
+02:02:57.813 [main] DEBUG o.h.internal.util.EntityPrinter - edu.ncsu.csc.itrust2.models.persistent.Personnel{zip=12345, lastName=HCP, specialty=null, address2=null, city=town, address1=1234 Road St., enabled=null, firstName=HCP, phone=111-222-3333, self=edu.ncsu.csc.itrust2.models.persistent.User#hcp, id=2, state=AK, email=csc326.201.1@gmail.com}
+02:02:57.827 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Written [{"status":"failed","message":"Personnel with the id edu.ncsu.csc.itrust2.models.persistent.User@2051ff2a already exists"}] as "text/plain" using [org.springframework.http.converter.StringHttpMessageConverter@171ce7a9]
+02:02:57.827 [main] DEBUG o.s.t.w.s.TestDispatcherServlet - Null ModelAndView returned to DispatcherServlet with name '': assuming HandlerAdapter completed request handling
+02:02:57.827 [main] DEBUG o.s.t.w.s.TestDispatcherServlet - Successfully completed request
+02:02:57.828 [main] DEBUG o.s.t.w.s.TestDispatcherServlet - DispatcherServlet with name '' processing POST request for [/api/v1/personnel]
+02:02:57.828 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Looking up handler method for path /api/v1/personnel
+02:02:57.828 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Returning handler method [public org.springframework.http.ResponseEntity edu.ncsu.csc.itrust2.controllers.api.APIPersonnelController.createPersonnel(edu.ncsu.csc.itrust2.forms.personnel.PersonnelForm)]
+02:02:57.828 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'APIPersonnelController'
+02:02:57.829 [main] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read [class edu.ncsu.csc.itrust2.forms.personnel.PersonnelForm] as "application/json" with [org.springframework.http.converter.json.GsonHttpMessageConverter@5bf93671]
+02:02:57.829 [main] DEBUG o.h.e.t.internal.TransactionImpl - begin
+02:02:57.844 [main] DEBUG org.hibernate.SQL - select this_.username as username1_15_0_, this_.enabled as enabled2_15_0_, this_.password as password3_15_0_, this_.role as role4_15_0_ from Users this_ where this_.username=?
+Hibernate: select this_.username as username1_15_0_, this_.enabled as enabled2_15_0_, this_.password as password3_15_0_, this_.role as role4_15_0_ from Users this_ where this_.username=?
+02:02:57.845 [main] DEBUG org.hibernate.loader.Loader - Result set row: 0
+02:02:57.845 [main] DEBUG org.hibernate.loader.Loader - Result row: EntityKey[edu.ncsu.csc.itrust2.models.persistent.User#hcp]
+02:02:57.846 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Resolving associations for [edu.ncsu.csc.itrust2.models.persistent.User#hcp]
+02:02:57.847 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Done materializing entity [edu.ncsu.csc.itrust2.models.persistent.User#hcp]
+02:02:57.847 [main] DEBUG o.h.e.t.internal.TransactionImpl - committing
+02:02:57.847 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Processing flush-time cascades
+02:02:57.847 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Dirty checking collections
+02:02:57.848 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+02:02:57.848 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+02:02:57.848 [main] DEBUG o.h.internal.util.EntityPrinter - Listing entities:
+02:02:57.856 [main] DEBUG o.h.internal.util.EntityPrinter - edu.ncsu.csc.itrust2.models.persistent.User{password=$2a$10$NxODd4nKMvHGSZSwQSVaauDdykvjgAVocIOginnv6jUZMPKPrCL32, role=ROLE_HCP, enabled=1, username=hcp}
+02:02:57.857 [main] DEBUG o.h.e.t.internal.TransactionImpl - begin
+02:02:57.858 [main] DEBUG org.hibernate.SQL - select this_.id as id1_13_1_, this_.address1 as address2_13_1_, this_.address2 as address3_13_1_, this_.city as city4_13_1_, this_.email as email5_13_1_, this_.enabled as enabled6_13_1_, this_.firstName as firstNam7_13_1_, this_.lastName as lastName8_13_1_, this_.phone as phone9_13_1_, this_.self_id as self_id13_13_1_, this_.specialty as special10_13_1_, this_.state as state11_13_1_, this_.zip as zip12_13_1_, user2_.username as username1_15_0_, user2_.enabled as enabled2_15_0_, user2_.password as password3_15_0_, user2_.role as role4_15_0_ from Personnel this_ left outer join Users user2_ on this_.self_id=user2_.username where this_.self_id=?
+Hibernate: select this_.id as id1_13_1_, this_.address1 as address2_13_1_, this_.address2 as address3_13_1_, this_.city as city4_13_1_, this_.email as email5_13_1_, this_.enabled as enabled6_13_1_, this_.firstName as firstNam7_13_1_, this_.lastName as lastName8_13_1_, this_.phone as phone9_13_1_, this_.self_id as self_id13_13_1_, this_.specialty as special10_13_1_, this_.state as state11_13_1_, this_.zip as zip12_13_1_, user2_.username as username1_15_0_, user2_.enabled as enabled2_15_0_, user2_.password as password3_15_0_, user2_.role as role4_15_0_ from Personnel this_ left outer join Users user2_ on this_.self_id=user2_.username where this_.self_id=?
+02:02:57.859 [main] DEBUG org.hibernate.loader.Loader - Result set row: 0
+02:02:57.859 [main] DEBUG org.hibernate.loader.Loader - Result row: EntityKey[edu.ncsu.csc.itrust2.models.persistent.User#hcp], EntityKey[edu.ncsu.csc.itrust2.models.persistent.Personnel#1]
+02:02:57.859 [main] DEBUG org.hibernate.loader.Loader - Result set row: 1
+02:02:57.860 [main] DEBUG org.hibernate.loader.Loader - Result row: EntityKey[edu.ncsu.csc.itrust2.models.persistent.User#hcp], EntityKey[edu.ncsu.csc.itrust2.models.persistent.Personnel#2]
+02:02:57.860 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Resolving associations for [edu.ncsu.csc.itrust2.models.persistent.User#hcp]
+02:02:57.860 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Done materializing entity [edu.ncsu.csc.itrust2.models.persistent.User#hcp]
+02:02:57.860 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Resolving associations for [edu.ncsu.csc.itrust2.models.persistent.Personnel#1]
+02:02:57.860 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Done materializing entity [edu.ncsu.csc.itrust2.models.persistent.Personnel#1]
+02:02:57.860 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Resolving associations for [edu.ncsu.csc.itrust2.models.persistent.Personnel#2]
+02:02:57.860 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Done materializing entity [edu.ncsu.csc.itrust2.models.persistent.Personnel#2]
+02:02:57.860 [main] DEBUG o.h.e.t.internal.TransactionImpl - committing
+02:02:57.860 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Processing flush-time cascades
+02:02:57.860 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Dirty checking collections
+02:02:57.861 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 3 objects
+02:02:57.861 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+02:02:57.861 [main] DEBUG o.h.internal.util.EntityPrinter - Listing entities:
+02:02:57.861 [main] DEBUG o.h.internal.util.EntityPrinter - edu.ncsu.csc.itrust2.models.persistent.User{password=$2a$10$NxODd4nKMvHGSZSwQSVaauDdykvjgAVocIOginnv6jUZMPKPrCL32, role=ROLE_HCP, enabled=1, username=hcp}
+02:02:57.861 [main] DEBUG o.h.internal.util.EntityPrinter - edu.ncsu.csc.itrust2.models.persistent.Personnel{zip=12345, lastName=HCP, specialty=null, address2=null, city=town, address1=1234 Road St., enabled=null, firstName=HCP, phone=111-222-3333, self=edu.ncsu.csc.itrust2.models.persistent.User#hcp, id=1, state=AK, email=csc326.201.1@gmail.com}
+02:02:57.861 [main] DEBUG o.h.internal.util.EntityPrinter - edu.ncsu.csc.itrust2.models.persistent.Personnel{zip=12345, lastName=HCP, specialty=null, address2=null, city=town, address1=1234 Road St., enabled=null, firstName=HCP, phone=111-222-3333, self=edu.ncsu.csc.itrust2.models.persistent.User#hcp, id=2, state=AK, email=csc326.201.1@gmail.com}
+02:02:57.875 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Written [{"status":"failed","message":"Personnel with the id edu.ncsu.csc.itrust2.models.persistent.User@2051ff2a already exists"}] as "text/plain" using [org.springframework.http.converter.StringHttpMessageConverter@171ce7a9]
+02:02:57.875 [main] DEBUG o.s.t.w.s.TestDispatcherServlet - Null ModelAndView returned to DispatcherServlet with name '': assuming HandlerAdapter completed request handling
+02:02:57.875 [main] DEBUG o.s.t.w.s.TestDispatcherServlet - Successfully completed request
+02:02:57.875 [main] DEBUG o.s.t.w.s.TestDispatcherServlet - DispatcherServlet with name '' processing GET request for [/api/v1/personnel]
+02:02:57.875 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Looking up handler method for path /api/v1/personnel
+02:02:57.882 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Returning handler method [public java.util.List<edu.ncsu.csc.itrust2.models.persistent.Personnel> edu.ncsu.csc.itrust2.controllers.api.APIPersonnelController.getPersonnel()]
+02:02:57.882 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'APIPersonnelController'
+02:02:57.882 [main] DEBUG o.s.t.w.s.TestDispatcherServlet - Last-Modified value for [/api/v1/personnel] is: -1
+02:02:57.883 [main] DEBUG o.h.e.t.internal.TransactionImpl - begin
+02:02:57.895 [main] DEBUG org.hibernate.SQL - select this_.id as id1_13_1_, this_.address1 as address2_13_1_, this_.address2 as address3_13_1_, this_.city as city4_13_1_, this_.email as email5_13_1_, this_.enabled as enabled6_13_1_, this_.firstName as firstNam7_13_1_, this_.lastName as lastName8_13_1_, this_.phone as phone9_13_1_, this_.self_id as self_id13_13_1_, this_.specialty as special10_13_1_, this_.state as state11_13_1_, this_.zip as zip12_13_1_, user2_.username as username1_15_0_, user2_.enabled as enabled2_15_0_, user2_.password as password3_15_0_, user2_.role as role4_15_0_ from Personnel this_ left outer join Users user2_ on this_.self_id=user2_.username
+Hibernate: select this_.id as id1_13_1_, this_.address1 as address2_13_1_, this_.address2 as address3_13_1_, this_.city as city4_13_1_, this_.email as email5_13_1_, this_.enabled as enabled6_13_1_, this_.firstName as firstNam7_13_1_, this_.lastName as lastName8_13_1_, this_.phone as phone9_13_1_, this_.self_id as self_id13_13_1_, this_.specialty as special10_13_1_, this_.state as state11_13_1_, this_.zip as zip12_13_1_, user2_.username as username1_15_0_, user2_.enabled as enabled2_15_0_, user2_.password as password3_15_0_, user2_.role as role4_15_0_ from Personnel this_ left outer join Users user2_ on this_.self_id=user2_.username
+02:02:57.896 [main] DEBUG org.hibernate.loader.Loader - Result set row: 0
+02:02:57.896 [main] DEBUG org.hibernate.loader.Loader - Result row: EntityKey[edu.ncsu.csc.itrust2.models.persistent.User#hcp], EntityKey[edu.ncsu.csc.itrust2.models.persistent.Personnel#1]
+02:02:57.898 [main] DEBUG org.hibernate.loader.Loader - Result set row: 1
+02:02:57.898 [main] DEBUG org.hibernate.loader.Loader - Result row: EntityKey[edu.ncsu.csc.itrust2.models.persistent.User#hcp], EntityKey[edu.ncsu.csc.itrust2.models.persistent.Personnel#2]
+02:02:57.898 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Resolving associations for [edu.ncsu.csc.itrust2.models.persistent.User#hcp]
+02:02:57.898 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Done materializing entity [edu.ncsu.csc.itrust2.models.persistent.User#hcp]
+02:02:57.898 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Resolving associations for [edu.ncsu.csc.itrust2.models.persistent.Personnel#1]
+02:02:57.898 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Done materializing entity [edu.ncsu.csc.itrust2.models.persistent.Personnel#1]
+02:02:57.900 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Resolving associations for [edu.ncsu.csc.itrust2.models.persistent.Personnel#2]
+02:02:57.901 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Done materializing entity [edu.ncsu.csc.itrust2.models.persistent.Personnel#2]
+02:02:57.904 [main] DEBUG o.h.e.t.internal.TransactionImpl - committing
+02:02:57.904 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Processing flush-time cascades
+02:02:57.904 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Dirty checking collections
+02:02:57.905 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 3 objects
+02:02:57.905 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+02:02:57.905 [main] DEBUG o.h.internal.util.EntityPrinter - Listing entities:
+02:02:57.905 [main] DEBUG o.h.internal.util.EntityPrinter - edu.ncsu.csc.itrust2.models.persistent.User{password=$2a$10$NxODd4nKMvHGSZSwQSVaauDdykvjgAVocIOginnv6jUZMPKPrCL32, role=ROLE_HCP, enabled=1, username=hcp}
+02:02:57.905 [main] DEBUG o.h.internal.util.EntityPrinter - edu.ncsu.csc.itrust2.models.persistent.Personnel{zip=12345, lastName=HCP, specialty=null, address2=null, city=town, address1=1234 Road St., enabled=null, firstName=HCP, phone=111-222-3333, self=edu.ncsu.csc.itrust2.models.persistent.User#hcp, id=1, state=AK, email=csc326.201.1@gmail.com}
+02:02:57.905 [main] DEBUG o.h.internal.util.EntityPrinter - edu.ncsu.csc.itrust2.models.persistent.Personnel{zip=12345, lastName=HCP, specialty=null, address2=null, city=town, address1=1234 Road St., enabled=null, firstName=HCP, phone=111-222-3333, self=edu.ncsu.csc.itrust2.models.persistent.User#hcp, id=2, state=AK, email=csc326.201.1@gmail.com}
+02:02:57.908 [main] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Written [[edu.ncsu.csc.itrust2.models.persistent.Personnel@49a18ad4, edu.ncsu.csc.itrust2.models.persistent.Personnel@4f0c84a0]] as "application/json" using [org.springframework.http.converter.json.GsonHttpMessageConverter@5bf93671]
+02:02:57.909 [main] DEBUG o.s.t.w.s.TestDispatcherServlet - Null ModelAndView returned to DispatcherServlet with name '': assuming HandlerAdapter completed request handling
+02:02:57.909 [main] DEBUG o.s.t.w.s.TestDispatcherServlet - Successfully completed request
+02:02:57.914 [main] DEBUG o.s.t.w.s.TestDispatcherServlet - DispatcherServlet with name '' processing GET request for [/api/v1/personnel/hcp]
+02:02:57.915 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Looking up handler method for path /api/v1/personnel/hcp
+02:02:57.922 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Returning handler method [public org.springframework.http.ResponseEntity edu.ncsu.csc.itrust2.controllers.api.APIPersonnelController.getPersonnel(java.lang.String)]
+02:02:57.930 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'APIPersonnelController'
+02:02:57.930 [main] DEBUG o.s.t.w.s.TestDispatcherServlet - Last-Modified value for [/api/v1/personnel/hcp] is: -1
+02:02:57.932 [main] DEBUG o.h.e.t.internal.TransactionImpl - begin
+02:02:57.941 [main] DEBUG org.hibernate.SQL - select this_.username as username1_15_0_, this_.enabled as enabled2_15_0_, this_.password as password3_15_0_, this_.role as role4_15_0_ from Users this_ where this_.username=?
+Hibernate: select this_.username as username1_15_0_, this_.enabled as enabled2_15_0_, this_.password as password3_15_0_, this_.role as role4_15_0_ from Users this_ where this_.username=?
+02:02:57.942 [main] DEBUG org.hibernate.loader.Loader - Result set row: 0
+02:02:57.946 [main] DEBUG org.hibernate.loader.Loader - Result row: EntityKey[edu.ncsu.csc.itrust2.models.persistent.User#hcp]
+02:02:57.946 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Resolving associations for [edu.ncsu.csc.itrust2.models.persistent.User#hcp]
+02:02:57.946 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Done materializing entity [edu.ncsu.csc.itrust2.models.persistent.User#hcp]
+02:02:57.947 [main] DEBUG o.h.e.t.internal.TransactionImpl - committing
+02:02:57.947 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Processing flush-time cascades
+02:02:57.947 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Dirty checking collections
+02:02:57.947 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+02:02:57.947 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+02:02:57.947 [main] DEBUG o.h.internal.util.EntityPrinter - Listing entities:
+02:02:57.947 [main] DEBUG o.h.internal.util.EntityPrinter - edu.ncsu.csc.itrust2.models.persistent.User{password=$2a$10$NxODd4nKMvHGSZSwQSVaauDdykvjgAVocIOginnv6jUZMPKPrCL32, role=ROLE_HCP, enabled=1, username=hcp}
+02:02:57.950 [main] DEBUG o.h.e.t.internal.TransactionImpl - begin
+02:02:57.961 [main] DEBUG org.hibernate.SQL - select this_.id as id1_13_1_, this_.address1 as address2_13_1_, this_.address2 as address3_13_1_, this_.city as city4_13_1_, this_.email as email5_13_1_, this_.enabled as enabled6_13_1_, this_.firstName as firstNam7_13_1_, this_.lastName as lastName8_13_1_, this_.phone as phone9_13_1_, this_.self_id as self_id13_13_1_, this_.specialty as special10_13_1_, this_.state as state11_13_1_, this_.zip as zip12_13_1_, user2_.username as username1_15_0_, user2_.enabled as enabled2_15_0_, user2_.password as password3_15_0_, user2_.role as role4_15_0_ from Personnel this_ left outer join Users user2_ on this_.self_id=user2_.username where this_.self_id=?
+Hibernate: select this_.id as id1_13_1_, this_.address1 as address2_13_1_, this_.address2 as address3_13_1_, this_.city as city4_13_1_, this_.email as email5_13_1_, this_.enabled as enabled6_13_1_, this_.firstName as firstNam7_13_1_, this_.lastName as lastName8_13_1_, this_.phone as phone9_13_1_, this_.self_id as self_id13_13_1_, this_.specialty as special10_13_1_, this_.state as state11_13_1_, this_.zip as zip12_13_1_, user2_.username as username1_15_0_, user2_.enabled as enabled2_15_0_, user2_.password as password3_15_0_, user2_.role as role4_15_0_ from Personnel this_ left outer join Users user2_ on this_.self_id=user2_.username where this_.self_id=?
+02:02:57.965 [main] DEBUG org.hibernate.loader.Loader - Result set row: 0
+02:02:57.969 [main] DEBUG org.hibernate.loader.Loader - Result row: EntityKey[edu.ncsu.csc.itrust2.models.persistent.User#hcp], EntityKey[edu.ncsu.csc.itrust2.models.persistent.Personnel#1]
+02:02:57.971 [main] DEBUG org.hibernate.loader.Loader - Result set row: 1
+02:02:57.971 [main] DEBUG org.hibernate.loader.Loader - Result row: EntityKey[edu.ncsu.csc.itrust2.models.persistent.User#hcp], EntityKey[edu.ncsu.csc.itrust2.models.persistent.Personnel#2]
+02:02:57.971 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Resolving associations for [edu.ncsu.csc.itrust2.models.persistent.User#hcp]
+02:02:57.971 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Done materializing entity [edu.ncsu.csc.itrust2.models.persistent.User#hcp]
+02:02:57.972 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Resolving associations for [edu.ncsu.csc.itrust2.models.persistent.Personnel#1]
+02:02:57.977 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Done materializing entity [edu.ncsu.csc.itrust2.models.persistent.Personnel#1]
+02:02:57.977 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Resolving associations for [edu.ncsu.csc.itrust2.models.persistent.Personnel#2]
+02:02:57.977 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Done materializing entity [edu.ncsu.csc.itrust2.models.persistent.Personnel#2]
+02:02:57.977 [main] DEBUG o.h.e.t.internal.TransactionImpl - committing
+02:02:57.977 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Processing flush-time cascades
+02:02:57.977 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Dirty checking collections
+02:02:57.978 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 3 objects
+02:02:57.978 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+02:02:57.978 [main] DEBUG o.h.internal.util.EntityPrinter - Listing entities:
+02:02:57.978 [main] DEBUG o.h.internal.util.EntityPrinter - edu.ncsu.csc.itrust2.models.persistent.User{password=$2a$10$NxODd4nKMvHGSZSwQSVaauDdykvjgAVocIOginnv6jUZMPKPrCL32, role=ROLE_HCP, enabled=1, username=hcp}
+02:02:57.978 [main] DEBUG o.h.internal.util.EntityPrinter - edu.ncsu.csc.itrust2.models.persistent.Personnel{zip=12345, lastName=HCP, specialty=null, address2=null, city=town, address1=1234 Road St., enabled=null, firstName=HCP, phone=111-222-3333, self=edu.ncsu.csc.itrust2.models.persistent.User#hcp, id=1, state=AK, email=csc326.201.1@gmail.com}
+02:02:57.979 [main] DEBUG o.h.internal.util.EntityPrinter - edu.ncsu.csc.itrust2.models.persistent.Personnel{zip=12345, lastName=HCP, specialty=null, address2=null, city=town, address1=1234 Road St., enabled=null, firstName=HCP, phone=111-222-3333, self=edu.ncsu.csc.itrust2.models.persistent.User#hcp, id=2, state=AK, email=csc326.201.1@gmail.com}
+02:02:57.981 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Written [{"status":"failed","message":"No personnel found for id hcp"}] as "text/plain" using [org.springframework.http.converter.StringHttpMessageConverter@171ce7a9]
+02:02:57.981 [main] DEBUG o.s.t.w.s.TestDispatcherServlet - Null ModelAndView returned to DispatcherServlet with name '': assuming HandlerAdapter completed request handling
+02:02:57.981 [main] DEBUG o.s.t.w.s.TestDispatcherServlet - Successfully completed request
+02:02:57.981 [main] DEBUG o.s.t.c.s.AbstractDirtiesContextTestExecutionListener - After test method: context [DefaultTestContext@3c43dda testClass = APIPersonnelTest, testInstance = edu.ncsu.csc.itrust2.apitest.APIPersonnelTest@1c320505, testMethod = testPersonnelAPI@APIPersonnelTest, testException = java.lang.AssertionError: Status expected:<200> but was:<404>, mergedContextConfiguration = [WebMergedContextConfiguration@4e24b71c testClass = APIPersonnelTest, locations = '{}', classes = '{class edu.ncsu.csc.itrust2.config.RootConfiguration, class edu.ncsu.csc.itrust2.mvc.config.WebMvcConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]]], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null].
+02:02:57.982 [main] DEBUG o.s.t.c.w.ServletTestExecutionListener - Resetting RequestContextHolder for test context [DefaultTestContext@3c43dda testClass = APIPersonnelTest, testInstance = edu.ncsu.csc.itrust2.apitest.APIPersonnelTest@1c320505, testMethod = testPersonnelAPI@APIPersonnelTest, testException = java.lang.AssertionError: Status expected:<200> but was:<404>, mergedContextConfiguration = [WebMergedContextConfiguration@4e24b71c testClass = APIPersonnelTest, locations = '{}', classes = '{class edu.ncsu.csc.itrust2.config.RootConfiguration, class edu.ncsu.csc.itrust2.mvc.config.WebMvcConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.test.context.web.WebDelegatingSmartContextLoader', parent = [null]]].
+]]></system-out>
+  </testcase>
+</testsuite>

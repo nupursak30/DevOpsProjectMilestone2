@@ -1,0 +1,25 @@
+  - name: Copy db properties
+    copy: remote_src=True src=iTrust2-v2/iTrust2/src/main/java/db.properties.template dest=iTrust2-v2/iTrust2/src/main/java/db.properties
+    become: yes
+
+  - name: Copy email properties
+    copy: remote_src=True src=iTrust2-v2/iTrust2/src/main/java/email.properties.template dest=iTrust2-v2/iTrust2/src/main/java/email.properties
+    become: yes
+
+  - name: Copy hibernate properties
+    copy: remote_src=True src=iTrust2-v2/iTrust2/src/main/resources/hibernate.properties.template dest=iTrust2-v2/iTrust2/src/main/resources/hibernate.properties
+    become: yes
+
+  - name: replace password in db
+    replace:
+     dest: iTrust2-v2/iTrust2/src/main/java/db.properties
+     regexp: 'password'
+     replace: 'password {{ mysqlpass}}'
+    become: yes
+
+  - name: replace password in hibernate
+    replace:
+     dest: iTrust2-v2/iTrust2/src/main/resources/hibernate.properties
+     regexp: 'hibernate.connection.password = '
+     replace: 'hibernate.connection.password =  {{ mysqlpass}}'
+    become: yes

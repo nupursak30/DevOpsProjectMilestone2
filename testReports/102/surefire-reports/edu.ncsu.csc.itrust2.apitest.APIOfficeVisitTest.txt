@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------------
+Test set: edu.ncsu.csc.itrust2.apitest.APIOfficeVisitTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 1.503 s <<< FAILURE! - in edu.ncsu.csc.itrust2.apitest.APIOfficeVisitTest
+testDeleteNonExistentOfficeVisit(edu.ncsu.csc.itrust2.apitest.APIOfficeVisitTest)  Time elapsed: 0.007 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<404> but was:<400>
+	at edu.ncsu.csc.itrust2.apitest.APIOfficeVisitTest.testDeleteNonExistentOfficeVisit(APIOfficeVisitTest.java:99)
+
+testOfficeVisitAPI(edu.ncsu.csc.itrust2.apitest.APIOfficeVisitTest)  Time elapsed: 0.539 s  <<< ERROR!
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.lang.NullPointerException
+	at edu.ncsu.csc.itrust2.apitest.APIOfficeVisitTest.testOfficeVisitAPI(APIOfficeVisitTest.java:420)
+Caused by: java.lang.NullPointerException
+	at edu.ncsu.csc.itrust2.apitest.APIOfficeVisitTest.testOfficeVisitAPI(APIOfficeVisitTest.java:420)
+

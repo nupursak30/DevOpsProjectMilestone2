@@ -1,0 +1,81 @@
+---
+-
+  hosts: localhost
+  name: "Setup jenkins"
+  tasks:
+  - name: Turning off Jenkins setup wizard
+    become: yes
+    lineinfile:
+      dest: /etc/default/jenkins
+      regexp: 'JAVA_ARGS="-Djava.awt.headless=true"'
+      line: 'JAVA_ARGS="-Djava.awt.headless=true -Djenkins.install.runSetupWizard=false"'
+    #register: jenkins_default
+
+
+  - name: Change Jenkins port to 8090
+    become: yes
+    lineinfile:
+      dest: /etc/default/jenkins
+      regexp: 'HTTP_PORT=8080'
+      line: 'HTTP_PORT=8090'
+    register: jenkins_default
+
+  - name: Enable Firewall
+    ufw:
+      state: enabled
+      policy: allow
+    become: yes
+
+  - name: Open port 8090
+    ufw:
+      rule: allow
+      port: 8090
+    become: yes
+
+  - name: Turning off Jenkins useSecurity
+    become: yes
+    lineinfile:
+      dest: /var/lib/jenkins/config.xml
+      regexp: '<useSecurity>true</useSecurity>'
+      line: '<useSecurity>false</useSecurity>'
+
+
+  - name: Turning off Jenkins denyAnonymousReadAccess
+    become: yes
+    lineinfile:
+      dest: /var/lib/jenkins/config.xml
+      regexp: '<denyAnonymousReadAccess>true</denyAnonymousReadAccess>'
+      line: '<denyAnonymousReadAccess>false</denyAnonymousReadAccess>'
+
+
+  - name: Turning off Jenkins Plugin wizard - 1
+    become: yes
+    lineinfile:
+      dest: /var/lib/jenkins/config.xml
+      regexp: '<installState>'
+      line: '<!--installState>'
+
+  - name: Turning off Jenkins Plugin wizard - 2
+    become: yes
+    lineinfile:
+      dest: /var/lib/jenkins/config.xml
+      regexp: '</installState>'
+      line: '</installState-->'
+    become: yes
+
+  - name: Restart Jenkins
+    service: name=jenkins state=restarted
+    become: yes
+    when: jenkins_default|changed or plugin_install|changed
+
+  - name: Wait for Jenkins to restart
+    uri:
+      url: http://localhost:8090
+      status_code: 200
+    register: result
+    until: >
+      'status' in result and
+      result['status'] == 200
+    retries: 60
+    delay: 10
+    when: jenkins_default|changed or plugin_install|changed

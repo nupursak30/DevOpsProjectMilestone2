@@ -1,0 +1,14 @@
+ - job:
+    name: iTrustBuildJob
+    project-type: freestyle
+    display-name: iTrustBuildJob
+    concurrent: true
+    workspace: "{{ jenkins_job_build_src }}"
+    retry-count: 3
+    builders:
+      - shell: |
+           sudo cp -rf -p pom.xml_WITHPLUGIN pom.xml
+           sudo mvn process-test-classes
+           sudo cp -rf -p pom.xml_NOPLUGIN pom.xml
+           sudo mvn clean test verify checkstyle:checkstyle
+    become: yes

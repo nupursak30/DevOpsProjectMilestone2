@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: edu.ncsu.csc.itrust2.apitest.APIICDCodeTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.01 s <<< FAILURE! - in edu.ncsu.csc.itrust2.apitest.APIICDCodeTest
+testCodeAPI(edu.ncsu.csc.itrust2.apitest.APIICDCodeTest)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.NullPointerException
+	at edu.ncsu.csc.itrust2.apitest.APIICDCodeTest.testCodeAPI(APIICDCodeTest.java:62)
+

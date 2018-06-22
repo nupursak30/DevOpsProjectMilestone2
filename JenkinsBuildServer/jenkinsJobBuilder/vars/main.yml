@@ -1,0 +1,35 @@
+#jenkins_job_builder_user_name: davitond
+#jenkins_job_builder_user_group: vcl
+jenkins_job_builder_user_name: "{{ currentUser.stdout }}"
+jenkins_job_builder_user_group: vcl
+
+jenkins_job_builder_config_job_builder_allow_duplicates: False
+jenkins_job_builder_config_job_builder_ignore_cache: True
+jenkins_job_builder_config_job_builder_keep_descriptions: False
+jenkins_job_builder_config_job_builder_recursive: False
+
+jenkins_job_builder_config_jenkins_url: "http://localhost:{{ jenkins_port }}"
+jenkins_job_config_xml_file: "{{ home_path }}/JenkinsBuildServer/iTrust2-v2/iTrust2/iTrust2JobPB.xml"
+jenkins_job_checkbox_config_xml_file: "{{ home_path }}/Jobsxml/CheckboxJob.xml"
+jenkins_job_builder_config_jenkins_query_plugins_info: False
+jenkins_job_builder_file_jobs_dest: /etc/jenkins_jobs/config
+jenkins_jobs_dest: "/var/lib/jenkins/jobs"
+jenkins_job_build_src: "{{ home_path }}/JenkinsBuildServer/iTrust2-v2/iTrust2"
+jenkins_job_checkbox_build_src: "{{ home_path }}/JenkinsBuildServer/checkbox.io/server-side/site"
+# jenkins_job_builder_file_checkboxjobs_dest: /etc/jenkins_jobs/config/checkboxBuild.yml
+jenkins_job_builder_file_itrustjobs_dest: /etc/jenkins_jobs/config/iTrustBuild.yml
+jenkins_job_builder_file_jobs_mode: "0755"
+# jenkins_job_builder_file_checkboxjobs_src: checkboxBuild.yml
+jenkins_job_builder_file_itrustjobs_src: iTrustBuild.yml
+jenkincheckboxjobname: checkboxBuildJob
+jenkinitrustjobname: iTrustBuildJob
+
+mysqlpass: root
+dummyEmail: itrustspring18@gmail.com
+dummyPassword: qwertyui!@#$
+
+jenkins_job_builder_template_jenkins_jobs_ini_dest: /etc/jenkins_jobs/jenkins_jobs.ini
+jenkins_job_builder_template_jenkins_jobs_ini_group: "{{ jenkins_job_builder_user_group }}"
+jenkins_job_builder_template_jenkins_jobs_ini_mode: "0440"
+jenkins_job_builder_template_jenkins_jobs_ini_owner: "{{ jenkins_job_builder_user_name }}"
+jenkins_job_builder_template_jenkins_jobs_ini_src: jenkins_jobs.ini.j2

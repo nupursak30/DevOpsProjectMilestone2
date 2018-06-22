@@ -1,0 +1,40 @@
+---
+- name: MongoDB | Import the public key used by the package management system
+  become: yes
+  apt_key: keyserver=keyserver.ubuntu.com id=7F0CEB10
+
+- name: MongoDB | Create a list file
+  become: yes
+  lineinfile: dest=/etc/apt/sources.list.d/mongodb-org-3.0.list line="deb http://repo.mongodb.org/apt/ubuntu precise/mongodb-org/3.0 multiverse" state=present create=yes
+
+- name: MongoDB | Install the packages
+  become: yes
+  apt: name={{ item }}=3.0.7 state=present update_cache=yes force=yes
+  with_items:
+    - mongodb-org
+    - mongodb-org-server
+    - mongodb-org-shell
+    - mongodb-org-mongos
+    - mongodb-org-tools
+
+- name: Install pyMongo
+  become: yes
+  pip:
+    name: pyMongo
+    state: present
+
+- mongodb_user:
+    database: admin
+    name: "{{ MONGO_USER }}"
+    password: "{{ MONGO_PASSWORD }}"
+    roles: dbAdmin,readWrite
+    state: present
+  
+  #vars:
+   # proxy_env:
+    #  http_proxy: http://proxy.example.com:8080
+
+  #tasks:
+
+   # - apt: name=cobbler state=installed
+      #environment: "{{proxy_env}}"

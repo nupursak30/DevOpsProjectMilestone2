@@ -1,0 +1,84 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<build>
+  <actions>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UserIdCause/>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <hudson.plugins.jacoco.JacocoBuildAction plugin="jacoco@3.0.1">
+      <clazz>
+        <missed>8</missed>
+        <covered>82</covered>
+        <initialized>true</initialized>
+      </clazz>
+      <method>
+        <missed>174</missed>
+        <covered>705</covered>
+        <initialized>true</initialized>
+      </method>
+      <line>
+        <missed>917</missed>
+        <covered>2088</covered>
+        <initialized>true</initialized>
+      </line>
+      <complexity>
+        <missed>426</missed>
+        <covered>853</covered>
+        <initialized>true</initialized>
+      </complexity>
+      <instruction>
+        <missed>3917</missed>
+        <covered>9043</covered>
+        <initialized>true</initialized>
+      </instruction>
+      <branch>
+        <missed>355</missed>
+        <covered>444</covered>
+        <initialized>true</initialized>
+      </branch>
+      <maxClazz>1</maxClazz>
+      <maxMethod>1</maxMethod>
+      <maxLine>1</maxLine>
+      <maxComplexity>1</maxComplexity>
+      <maxInstruction>1</maxInstruction>
+      <maxBranch>1</maxBranch>
+      <failed>false</failed>
+      <inclusions>
+        <string></string>
+      </inclusions>
+      <exclusions>
+        <string></string>
+      </exclusions>
+      <thresholds>
+        <minClass>0</minClass>
+        <maxClass>0</maxClass>
+        <minMethod>0</minMethod>
+        <maxMethod>0</maxMethod>
+        <minLine>0</minLine>
+        <maxLine>0</maxLine>
+        <minBranch>0</minBranch>
+        <maxBranch>0</maxBranch>
+        <minInstruction>0</minInstruction>
+        <maxInstruction>0</maxInstruction>
+        <minComplexity>0</minComplexity>
+        <maxComplexity>0</maxComplexity>
+      </thresholds>
+    </hudson.plugins.jacoco.JacocoBuildAction>
+  </actions>
+  <queueId>45</queueId>
+  <timestamp>1521696489497</timestamp>
+  <startTime>1521696489563</startTime>
+  <result>SUCCESS</result>
+  <duration>288595</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <builtOn></builtOn>
+  <workspace>/var/lib/jenkins/workspace/iTrustBuildJob</workspace>
+  <hudsonVersion>2.107.1</hudsonVersion>
+  <scm class="hudson.scm.NullChangeLogParser"/>
+  <culprits class="com.google.common.collect.EmptyImmutableSortedSet"/>
+</build>

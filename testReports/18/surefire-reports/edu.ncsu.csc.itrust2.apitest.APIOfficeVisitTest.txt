@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: edu.ncsu.csc.itrust2.apitest.APIOfficeVisitTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 0.046 s <<< FAILURE! - in edu.ncsu.csc.itrust2.apitest.APIOfficeVisitTest
+testDeleteNonExistentOfficeVisit(edu.ncsu.csc.itrust2.apitest.APIOfficeVisitTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<404> but was:<400>
+	at edu.ncsu.csc.itrust2.apitest.APIOfficeVisitTest.testDeleteNonExistentOfficeVisit(APIOfficeVisitTest.java:99)
+
+testOfficeVisitAPI(edu.ncsu.csc.itrust2.apitest.APIOfficeVisitTest)  Time elapsed: 0.025 s  <<< ERROR!
+java.lang.NullPointerException
+	at edu.ncsu.csc.itrust2.apitest.APIOfficeVisitTest.testOfficeVisitAPI(APIOfficeVisitTest.java:259)
+

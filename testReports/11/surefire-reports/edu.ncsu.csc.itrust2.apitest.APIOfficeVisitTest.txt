@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: edu.ncsu.csc.itrust2.apitest.APIOfficeVisitTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.026 s <<< FAILURE! - in edu.ncsu.csc.itrust2.apitest.APIOfficeVisitTest
+testOfficeVisitAPI(edu.ncsu.csc.itrust2.apitest.APIOfficeVisitTest)  Time elapsed: 0.008 s  <<< ERROR!
+java.lang.NullPointerException
+	at edu.ncsu.csc.itrust2.apitest.APIOfficeVisitTest.testOfficeVisitAPI(APIOfficeVisitTest.java:259)
+

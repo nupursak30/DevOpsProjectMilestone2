@@ -1,0 +1,16 @@
+---
+-
+  hosts: localhost
+  name: "Fuzzer test Playbook"
+  tasks:
+  - name: Installing node modules for fuzzer test
+    shell: npm install
+    become: yes
+
+  - name: Running fuzzer test
+    shell: node fuzzer.js
+    become: yes
+    register: fuzzerOutput
+
+  - debug:
+      msg: "{{ fuzzerOutput.stdout }}"

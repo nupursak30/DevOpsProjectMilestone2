@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: edu.ncsu.csc.itrust2.apitest.APIAppointmentRequestTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.032 s <<< FAILURE! - in edu.ncsu.csc.itrust2.apitest.APIAppointmentRequestTest
+testAppointmentRequestAPI(edu.ncsu.csc.itrust2.apitest.APIAppointmentRequestTest)  Time elapsed: 0.014 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<200> but was:<404>
+	at edu.ncsu.csc.itrust2.apitest.APIAppointmentRequestTest.testAppointmentRequestAPI(APIAppointmentRequestTest.java:155)
+
+testGetNonExistentAppointment(edu.ncsu.csc.itrust2.apitest.APIAppointmentRequestTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<404> but was:<200>
+	at edu.ncsu.csc.itrust2.apitest.APIAppointmentRequestTest.testGetNonExistentAppointment(APIAppointmentRequestTest.java:63)
+

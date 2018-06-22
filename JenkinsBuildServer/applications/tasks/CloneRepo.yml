@@ -1,0 +1,18 @@
+- name: clone iTrust repository
+  become: yes
+  git: >
+      repo=git@github.ncsu.edu:davitond/iTrust2-v2.git
+      key_file=.ssh/id_rsa
+      dest=iTrust2-v2
+      accept_hostkey=yes
+      update=no
+      force=yes
+
+- name: clone Checkbox repository
+  become: yes
+  git: >
+      repo=https://github.com/chrisparnin/checkbox.io.git
+      dest=checkbox.io
+      accept_hostkey=yes
+      update=no
+      force=yes

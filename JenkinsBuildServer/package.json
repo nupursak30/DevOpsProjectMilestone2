@@ -1,0 +1,31 @@
+{
+  "name": "fuzz",
+  "version": "1.0.0",
+  "description": "fuzz-workshop",
+  "main": "main.js",
+  "scripts": {
+    "test": "cross-env NODE_ENV=test mocha --reporter spec"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cross-env": "^5.0.5",
+    "fuzzer": "^0.2.0",
+    "istanbul": "^0.3.5",
+    "jade": "^1.9.2",
+    "json5": "^0.4.0",
+    "marked": "^0.3.3",
+    "random-js": "^1.0.4",
+    "underscore": "^1.7.0",
+    "slash": "^1.0.0",
+    "recursive-readdir-sync": "^1.0.6"
+  },
+  "dependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^3.5.0",
+    "fs-extra": "^5.0.0",
+    "simple-git": "^1.92.0",
+    "gitsync": "^0.0.11",
+    "git-rev-sync": "^1.10.0"
+  }
+}

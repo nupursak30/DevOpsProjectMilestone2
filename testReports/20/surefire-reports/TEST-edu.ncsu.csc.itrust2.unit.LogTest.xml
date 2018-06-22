@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="edu.ncsu.csc.itrust2.unit.LogTest" time="0.07" tests="1" errors="0" skipped="0" failures="1">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-oracle/jre/lib/amd64"/>
+    <property name="java.vm.version" value="25.161-b12"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=":"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/var/lib/jenkins/workspace/iTrustBuildJob/iTrust2"/>
+    <property name="java.runtime.version" value="1.8.0_161-b12"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="/usr/lib/jvm/java-8-oracle/jre/lib/endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="os.name" value="Linux"/>
+    <property name="classworlds.conf" value="/usr/share/maven/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="3.13.0-139-generic"/>
+    <property name="user.home" value="/root"/>
+    <property name="user.timezone" value="America/New_York"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="user.name" value="root"/>
+    <property name="java.class.path" value="/usr/share/maven/boot/plexus-classworlds-2.x.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="/usr/lib/jvm/java-8-oracle/jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean test verify checkstyle:checkstyle"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_161"/>
+    <property name="java.ext.dirs" value="/usr/lib/jvm/java-8-oracle/jre/lib/ext:/usr/java/packages/lib/ext"/>
+    <property name="securerandom.source" value="file:/dev/./urandom"/>
+    <property name="sun.boot.class.path" value="/usr/lib/jvm/java-8-oracle/jre/lib/resources.jar:/usr/lib/jvm/java-8-oracle/jre/lib/rt.jar:/usr/lib/jvm/java-8-oracle/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jsse.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jce.jar:/usr/lib/jvm/java-8-oracle/jre/lib/charsets.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jfr.jar:/usr/lib/jvm/java-8-oracle/jre/classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="/usr/share/maven"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase name="testLogging" classname="edu.ncsu.csc.itrust2.unit.LogTest" time="0.07">
+    <failure message="expected:&lt;1&gt; but was:&lt;0&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<1> but was:<0>
+	at edu.ncsu.csc.itrust2.unit.LogTest.testLogging(LogTest.java:46)
+]]></failure>
+    <system-out><![CDATA[00:21:09.786 [main] DEBUG o.h.e.t.internal.TransactionImpl - begin
+00:21:09.787 [main] DEBUG org.hibernate.SQL - select this_.id as id1_6_0_, this_.logCode as logCode2_6_0_, this_.message as message3_6_0_, this_.primaryUser as primaryU4_6_0_, this_.secondaryUser as secondar5_6_0_, this_.time as time6_6_0_ from LogEntries this_ where (this_.primaryUser=? or this_.secondaryUser=?)
+Hibernate: select this_.id as id1_6_0_, this_.logCode as logCode2_6_0_, this_.message as message3_6_0_, this_.primaryUser as primaryU4_6_0_, this_.secondaryUser as secondar5_6_0_, this_.time as time6_6_0_ from LogEntries this_ where (this_.primaryUser=? or this_.secondaryUser=?)
+00:21:09.788 [main] DEBUG o.h.e.t.internal.TransactionImpl - committing
+00:21:09.789 [main] DEBUG o.h.e.t.internal.TransactionImpl - begin
+00:21:09.789 [main] DEBUG org.hibernate.SQL - select next_val as id_val from hibernate_sequence for update
+Hibernate: select next_val as id_val from hibernate_sequence for update
+00:21:09.790 [main] DEBUG org.hibernate.SQL - update hibernate_sequence set next_val= ? where next_val=?
+Hibernate: update hibernate_sequence set next_val= ? where next_val=?
+00:21:09.801 [main] DEBUG o.h.e.i.AbstractSaveEventListener - Generated identifier: 582, using strategy: org.hibernate.id.enhanced.SequenceStyleGenerator
+00:21:09.802 [main] DEBUG o.h.e.t.internal.TransactionImpl - committing
+00:21:09.802 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Processing flush-time cascades
+00:21:09.802 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Dirty checking collections
+00:21:09.802 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Flushed: 1 insertions, 0 updates, 0 deletions to 1 objects
+00:21:09.802 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+00:21:09.802 [main] DEBUG o.h.internal.util.EntityPrinter - Listing entities:
+00:21:09.802 [main] DEBUG o.h.internal.util.EntityPrinter - edu.ncsu.csc.itrust2.models.persistent.LogEntry{secondaryUser=logHcp, logCode=19, primaryUser=logPatient, id=582, time=java.util.GregorianCalendar[time=1521692469789,areFieldsSet=true,areAllFieldsSet=true,lenient=true,zone=sun.util.calendar.ZoneInfo[id="America/New_York",offset=-18000000,dstSavings=3600000,useDaylight=true,transitions=235,lastRule=java.util.SimpleTimeZone[id=America/New_York,offset=-18000000,dstSavings=3600000,useDaylight=true,startYear=0,startMode=3,startMonth=2,startDay=8,startDayOfWeek=1,startTime=7200000,startTimeMode=0,endMode=3,endMonth=10,endDay=1,endDayOfWeek=1,endTime=7200000,endTimeMode=0]],firstDayOfWeek=1,minimalDaysInFirstWeek=1,ERA=1,YEAR=2018,MONTH=2,WEEK_OF_YEAR=12,WEEK_OF_MONTH=4,DAY_OF_MONTH=22,DAY_OF_YEAR=81,DAY_OF_WEEK=5,DAY_OF_WEEK_IN_MONTH=4,AM_PM=0,HOUR=0,HOUR_OF_DAY=0,MINUTE=21,SECOND=9,MILLISECOND=789,ZONE_OFFSET=-18000000,DST_OFFSET=3600000], message=test log entry with patient and hcp}
+00:21:09.803 [main] DEBUG org.hibernate.SQL - insert into LogEntries (logCode, message, primaryUser, secondaryUser, time, id) values (?, ?, ?, ?, ?, ?)
+Hibernate: insert into LogEntries (logCode, message, primaryUser, secondaryUser, time, id) values (?, ?, ?, ?, ?, ?)
+00:21:09.810 [main] DEBUG o.h.e.j.internal.JdbcCoordinatorImpl - HHH000420: Closing un-released batch
+00:21:09.811 [main] DEBUG o.h.e.t.internal.TransactionImpl - begin
+00:21:09.811 [main] DEBUG org.hibernate.SQL - select next_val as id_val from hibernate_sequence for update
+Hibernate: select next_val as id_val from hibernate_sequence for update
+00:21:09.812 [main] DEBUG org.hibernate.SQL - update hibernate_sequence set next_val= ? where next_val=?
+Hibernate: update hibernate_sequence set next_val= ? where next_val=?
+00:21:09.818 [main] DEBUG o.h.e.i.AbstractSaveEventListener - Generated identifier: 583, using strategy: org.hibernate.id.enhanced.SequenceStyleGenerator
+00:21:09.818 [main] DEBUG o.h.e.t.internal.TransactionImpl - committing
+00:21:09.818 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Processing flush-time cascades
+00:21:09.818 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Dirty checking collections
+00:21:09.818 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Flushed: 1 insertions, 0 updates, 0 deletions to 1 objects
+00:21:09.818 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+00:21:09.818 [main] DEBUG o.h.internal.util.EntityPrinter - Listing entities:
+00:21:09.818 [main] DEBUG o.h.internal.util.EntityPrinter - edu.ncsu.csc.itrust2.models.persistent.LogEntry{secondaryUser=null, logCode=15, primaryUser=logAdmin, id=583, time=java.util.GregorianCalendar[time=1521692469811,areFieldsSet=true,areAllFieldsSet=true,lenient=true,zone=sun.util.calendar.ZoneInfo[id="America/New_York",offset=-18000000,dstSavings=3600000,useDaylight=true,transitions=235,lastRule=java.util.SimpleTimeZone[id=America/New_York,offset=-18000000,dstSavings=3600000,useDaylight=true,startYear=0,startMode=3,startMonth=2,startDay=8,startDayOfWeek=1,startTime=7200000,startTimeMode=0,endMode=3,endMonth=10,endDay=1,endDayOfWeek=1,endTime=7200000,endTimeMode=0]],firstDayOfWeek=1,minimalDaysInFirstWeek=1,ERA=1,YEAR=2018,MONTH=2,WEEK_OF_YEAR=12,WEEK_OF_MONTH=4,DAY_OF_MONTH=22,DAY_OF_YEAR=81,DAY_OF_WEEK=5,DAY_OF_WEEK_IN_MONTH=4,AM_PM=0,HOUR=0,HOUR_OF_DAY=0,MINUTE=21,SECOND=9,MILLISECOND=811,ZONE_OFFSET=-18000000,DST_OFFSET=3600000], message=null}
+00:21:09.819 [main] DEBUG org.hibernate.SQL - insert into LogEntries (logCode, message, primaryUser, secondaryUser, time, id) values (?, ?, ?, ?, ?, ?)
+Hibernate: insert into LogEntries (logCode, message, primaryUser, secondaryUser, time, id) values (?, ?, ?, ?, ?, ?)
+00:21:09.826 [main] DEBUG o.h.e.j.internal.JdbcCoordinatorImpl - HHH000420: Closing un-released batch
+00:21:09.827 [main] DEBUG o.h.e.t.internal.TransactionImpl - begin
+00:21:09.827 [main] DEBUG org.hibernate.SQL - select next_val as id_val from hibernate_sequence for update
+Hibernate: select next_val as id_val from hibernate_sequence for update
+00:21:09.827 [main] DEBUG org.hibernate.SQL - update hibernate_sequence set next_val= ? where next_val=?
+Hibernate: update hibernate_sequence set next_val= ? where next_val=?
+00:21:09.835 [main] DEBUG o.h.e.i.AbstractSaveEventListener - Generated identifier: 584, using strategy: org.hibernate.id.enhanced.SequenceStyleGenerator
+00:21:09.835 [main] DEBUG o.h.e.t.internal.TransactionImpl - committing
+00:21:09.835 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Processing flush-time cascades
+00:21:09.835 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Dirty checking collections
+00:21:09.835 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Flushed: 1 insertions, 0 updates, 0 deletions to 1 objects
+00:21:09.835 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+00:21:09.835 [main] DEBUG o.h.internal.util.EntityPrinter - Listing entities:
+00:21:09.835 [main] DEBUG o.h.internal.util.EntityPrinter - edu.ncsu.csc.itrust2.models.persistent.LogEntry{secondaryUser=null, logCode=1, primaryUser=logPatient, id=584, time=java.util.GregorianCalendar[time=1521692469826,areFieldsSet=true,areAllFieldsSet=true,lenient=true,zone=sun.util.calendar.ZoneInfo[id="America/New_York",offset=-18000000,dstSavings=3600000,useDaylight=true,transitions=235,lastRule=java.util.SimpleTimeZone[id=America/New_York,offset=-18000000,dstSavings=3600000,useDaylight=true,startYear=0,startMode=3,startMonth=2,startDay=8,startDayOfWeek=1,startTime=7200000,startTimeMode=0,endMode=3,endMonth=10,endDay=1,endDayOfWeek=1,endTime=7200000,endTimeMode=0]],firstDayOfWeek=1,minimalDaysInFirstWeek=1,ERA=1,YEAR=2018,MONTH=2,WEEK_OF_YEAR=12,WEEK_OF_MONTH=4,DAY_OF_MONTH=22,DAY_OF_YEAR=81,DAY_OF_WEEK=5,DAY_OF_WEEK_IN_MONTH=4,AM_PM=0,HOUR=0,HOUR_OF_DAY=0,MINUTE=21,SECOND=9,MILLISECOND=826,ZONE_OFFSET=-18000000,DST_OFFSET=3600000], message=login succeeded for logPatient.}
+00:21:09.835 [main] DEBUG org.hibernate.SQL - insert into LogEntries (logCode, message, primaryUser, secondaryUser, time, id) values (?, ?, ?, ?, ?, ?)
+Hibernate: insert into LogEntries (logCode, message, primaryUser, secondaryUser, time, id) values (?, ?, ?, ?, ?, ?)
+00:21:09.844 [main] DEBUG o.h.e.j.internal.JdbcCoordinatorImpl - HHH000420: Closing un-released batch
+00:21:09.844 [main] DEBUG o.h.e.t.internal.TransactionImpl - begin
+00:21:09.850 [main] DEBUG org.hibernate.SQL - select this_.id as id1_6_0_, this_.logCode as logCode2_6_0_, this_.message as message3_6_0_, this_.primaryUser as primaryU4_6_0_, this_.secondaryUser as secondar5_6_0_, this_.time as time6_6_0_ from LogEntries this_ where (this_.primaryUser=? or this_.secondaryUser=?)
+Hibernate: select this_.id as id1_6_0_, this_.logCode as logCode2_6_0_, this_.message as message3_6_0_, this_.primaryUser as primaryU4_6_0_, this_.secondaryUser as secondar5_6_0_, this_.time as time6_6_0_ from LogEntries this_ where (this_.primaryUser=? or this_.secondaryUser=?)
+00:21:09.851 [main] DEBUG org.hibernate.loader.Loader - Result set row: 0
+00:21:09.851 [main] DEBUG org.hibernate.loader.Loader - Result row: EntityKey[edu.ncsu.csc.itrust2.models.persistent.LogEntry#582]
+00:21:09.852 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Resolving associations for [edu.ncsu.csc.itrust2.models.persistent.LogEntry#582]
+00:21:09.852 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Done materializing entity [edu.ncsu.csc.itrust2.models.persistent.LogEntry#582]
+00:21:09.852 [main] DEBUG o.h.e.t.internal.TransactionImpl - committing
+00:21:09.852 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Processing flush-time cascades
+00:21:09.852 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Dirty checking collections
+00:21:09.852 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+00:21:09.852 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+00:21:09.852 [main] DEBUG o.h.internal.util.EntityPrinter - Listing entities:
+00:21:09.852 [main] DEBUG o.h.internal.util.EntityPrinter - edu.ncsu.csc.itrust2.models.persistent.LogEntry{secondaryUser=logHcp, logCode=19, primaryUser=logPatient, id=582, time=java.util.GregorianCalendar[time=1521692469000,areFieldsSet=true,areAllFieldsSet=true,lenient=true,zone=sun.util.calendar.ZoneInfo[id="America/New_York",offset=-18000000,dstSavings=3600000,useDaylight=true,transitions=235,lastRule=java.util.SimpleTimeZone[id=America/New_York,offset=-18000000,dstSavings=3600000,useDaylight=true,startYear=0,startMode=3,startMonth=2,startDay=8,startDayOfWeek=1,startTime=7200000,startTimeMode=0,endMode=3,endMonth=10,endDay=1,endDayOfWeek=1,endTime=7200000,endTimeMode=0]],firstDayOfWeek=1,minimalDaysInFirstWeek=1,ERA=1,YEAR=2018,MONTH=2,WEEK_OF_YEAR=12,WEEK_OF_MONTH=4,DAY_OF_MONTH=22,DAY_OF_YEAR=81,DAY_OF_WEEK=5,DAY_OF_WEEK_IN_MONTH=4,AM_PM=0,HOUR=0,HOUR_OF_DAY=0,MINUTE=21,SECOND=9,MILLISECOND=0,ZONE_OFFSET=-18000000,DST_OFFSET=3600000], message=test log entry with patient and hcp}
+00:21:09.852 [main] DEBUG o.h.e.t.internal.TransactionImpl - begin
+00:21:09.853 [main] DEBUG org.hibernate.SQL - select this_.id as id1_6_0_, this_.logCode as logCode2_6_0_, this_.message as message3_6_0_, this_.primaryUser as primaryU4_6_0_, this_.secondaryUser as secondar5_6_0_, this_.time as time6_6_0_ from LogEntries this_ where (this_.primaryUser=? or this_.secondaryUser=?)
+Hibernate: select this_.id as id1_6_0_, this_.logCode as logCode2_6_0_, this_.message as message3_6_0_, this_.primaryUser as primaryU4_6_0_, this_.secondaryUser as secondar5_6_0_, this_.time as time6_6_0_ from LogEntries this_ where (this_.primaryUser=? or this_.secondaryUser=?)
+00:21:09.854 [main] DEBUG org.hibernate.loader.Loader - Result set row: 0
+00:21:09.854 [main] DEBUG org.hibernate.loader.Loader - Result row: EntityKey[edu.ncsu.csc.itrust2.models.persistent.LogEntry#582]
+00:21:09.854 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Resolving associations for [edu.ncsu.csc.itrust2.models.persistent.LogEntry#582]
+00:21:09.854 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Done materializing entity [edu.ncsu.csc.itrust2.models.persistent.LogEntry#582]
+00:21:09.854 [main] DEBUG o.h.e.t.internal.TransactionImpl - committing
+00:21:09.854 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Processing flush-time cascades
+00:21:09.854 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Dirty checking collections
+00:21:09.854 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+00:21:09.854 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+00:21:09.854 [main] DEBUG o.h.internal.util.EntityPrinter - Listing entities:
+00:21:09.854 [main] DEBUG o.h.internal.util.EntityPrinter - edu.ncsu.csc.itrust2.models.persistent.LogEntry{secondaryUser=logHcp, logCode=19, primaryUser=logPatient, id=582, time=java.util.GregorianCalendar[time=1521692469000,areFieldsSet=true,areAllFieldsSet=true,lenient=true,zone=sun.util.calendar.ZoneInfo[id="America/New_York",offset=-18000000,dstSavings=3600000,useDaylight=true,transitions=235,lastRule=java.util.SimpleTimeZone[id=America/New_York,offset=-18000000,dstSavings=3600000,useDaylight=true,startYear=0,startMode=3,startMonth=2,startDay=8,startDayOfWeek=1,startTime=7200000,startTimeMode=0,endMode=3,endMonth=10,endDay=1,endDayOfWeek=1,endTime=7200000,endTimeMode=0]],firstDayOfWeek=1,minimalDaysInFirstWeek=1,ERA=1,YEAR=2018,MONTH=2,WEEK_OF_YEAR=12,WEEK_OF_MONTH=4,DAY_OF_MONTH=22,DAY_OF_YEAR=81,DAY_OF_WEEK=5,DAY_OF_WEEK_IN_MONTH=4,AM_PM=0,HOUR=0,HOUR_OF_DAY=0,MINUTE=21,SECOND=9,MILLISECOND=0,ZONE_OFFSET=-18000000,DST_OFFSET=3600000], message=test log entry with patient and hcp}
+00:21:09.854 [main] DEBUG o.h.e.t.internal.TransactionImpl - begin
+00:21:09.855 [main] DEBUG org.hibernate.SQL - select this_.id as id1_6_0_, this_.logCode as logCode2_6_0_, this_.message as message3_6_0_, this_.primaryUser as primaryU4_6_0_, this_.secondaryUser as secondar5_6_0_, this_.time as time6_6_0_ from LogEntries this_ where (this_.primaryUser=? or this_.secondaryUser=?)
+Hibernate: select this_.id as id1_6_0_, this_.logCode as logCode2_6_0_, this_.message as message3_6_0_, this_.primaryUser as primaryU4_6_0_, this_.secondaryUser as secondar5_6_0_, this_.time as time6_6_0_ from LogEntries this_ where (this_.primaryUser=? or this_.secondaryUser=?)
+00:21:09.856 [main] DEBUG org.hibernate.loader.Loader - Result set row: 0
+00:21:09.856 [main] DEBUG org.hibernate.loader.Loader - Result row: EntityKey[edu.ncsu.csc.itrust2.models.persistent.LogEntry#582]
+00:21:09.856 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Resolving associations for [edu.ncsu.csc.itrust2.models.persistent.LogEntry#582]
+00:21:09.856 [main] DEBUG o.h.engine.internal.TwoPhaseLoad - Done materializing entity [edu.ncsu.csc.itrust2.models.persistent.LogEntry#582]
+00:21:09.856 [main] DEBUG o.h.e.t.internal.TransactionImpl - committing
+00:21:09.856 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Processing flush-time cascades
+00:21:09.856 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Dirty checking collections
+00:21:09.856 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+00:21:09.856 [main] DEBUG o.h.e.i.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+00:21:09.856 [main] DEBUG o.h.internal.util.EntityPrinter - Listing entities:
+00:21:09.856 [main] DEBUG o.h.internal.util.EntityPrinter - edu.ncsu.csc.itrust2.models.persistent.LogEntry{secondaryUser=logHcp, logCode=19, primaryUser=logPatient, id=582, time=java.util.GregorianCalendar[time=1521692469000,areFieldsSet=true,areAllFieldsSet=true,lenient=true,zone=sun.util.calendar.ZoneInfo[id="America/New_York",offset=-18000000,dstSavings=3600000,useDaylight=true,transitions=235,lastRule=java.util.SimpleTimeZone[id=America/New_York,offset=-18000000,dstSavings=3600000,useDaylight=true,startYear=0,startMode=3,startMonth=2,startDay=8,startDayOfWeek=1,startTime=7200000,startTimeMode=0,endMode=3,endMonth=10,endDay=1,endDayOfWeek=1,endTime=7200000,endTimeMode=0]],firstDayOfWeek=1,minimalDaysInFirstWeek=1,ERA=1,YEAR=2018,MONTH=2,WEEK_OF_YEAR=12,WEEK_OF_MONTH=4,DAY_OF_MONTH=22,DAY_OF_YEAR=81,DAY_OF_WEEK=5,DAY_OF_WEEK_IN_MONTH=4,AM_PM=0,HOUR=0,HOUR_OF_DAY=0,MINUTE=21,SECOND=9,MILLISECOND=0,ZONE_OFFSET=-18000000,DST_OFFSET=3600000], message=test log entry with patient and hcp}
+]]></system-out>
+  </testcase>
+</testsuite>

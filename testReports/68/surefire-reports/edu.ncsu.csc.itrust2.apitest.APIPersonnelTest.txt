@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: edu.ncsu.csc.itrust2.apitest.APIPersonnelTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.026 s <<< FAILURE! - in edu.ncsu.csc.itrust2.apitest.APIPersonnelTest
+testGetNonExistentPersonnel(edu.ncsu.csc.itrust2.apitest.APIPersonnelTest)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<404> but was:<200>
+	at edu.ncsu.csc.itrust2.apitest.APIPersonnelTest.testGetNonExistentPersonnel(APIPersonnelTest.java:61)
+
+testPersonnelAPI(edu.ncsu.csc.itrust2.apitest.APIPersonnelTest)  Time elapsed: 0.013 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<200> but was:<404>
+	at edu.ncsu.csc.itrust2.apitest.APIPersonnelTest.testPersonnelAPI(APIPersonnelTest.java:100)
+

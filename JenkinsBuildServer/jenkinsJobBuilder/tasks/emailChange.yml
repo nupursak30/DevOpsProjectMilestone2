@@ -1,0 +1,26 @@
+  - name: Change from key in email properties
+    lineinfile:
+      path: ./iTrust2-v2/iTrust2/src/main/java/email.properties.template
+      state: present
+      regexp: 'from'
+      line: 'from {{ dummyEmail }}'
+      backrefs: yes
+    become: yes
+
+  - name: Change username in email properties
+    lineinfile:
+      path: ./iTrust2-v2/iTrust2/src/main/java/email.properties.template
+      state: present
+      regexp: 'username'
+      line: 'username {{ dummyEmail }}'
+      backrefs: yes
+    become: yes
+
+  - name: Change password in email properties password
+    lineinfile:
+      path: ./iTrust2-v2/iTrust2/src/main/java/email.properties.template
+      state: present
+      regexp: 'password'
+      line: 'password {{ dummyPassword }}'
+      backrefs: yes
+    become: yes

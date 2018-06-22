@@ -1,0 +1,7 @@
+  - name: Get current User - whoami
+    become: no
+    shell: whoami
+    register: currentUser
+
+  - debug:
+      msg: "{{ currentUser.stdout }}"

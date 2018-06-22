@@ -1,0 +1,59 @@
+---
+#- import_tasks: sql.yml
+-
+  apt: "pkg={{ item }} state=present update-cache=yes"
+  become: true
+  name: Install system packages.
+  with_items:
+#    - libmysqlclient-dev
+    - python-dev
+    - python-pip
+    - gcc
+    - python-setuptools
+#    - mysql-server
+    - git-core
+#    - mysql-client
+    - python-setuptools
+
+- import_tasks: sql.yml
+-
+  name: check mysql running
+  service: "name=mysql state=started enabled=true"
+-
+  become: true
+  name: Install the Python MySQLB
+  pip: name=MySQL-python
+-
+  debug:
+    msg: "{{ ansible_env.HOME}}"
+#-
+#  mysql_user: "name=root host=localhost password=\"{{ root_db_password }}\" check_implicit_admin=yes state=present"
+#  name: update mysql root password
+-
+  become: true
+  name: copy .my.cnf file with credentials
+  template: "src=templates/my.cnf dest=/etc/mysql/my.cnf mode=0644 owner=root"
+# owner={{ansible_user}} mode=0644"
+#dont remove this but no need after first setup, throws error, condition improve
+#-
+#  become: true
+#  mysql_user: "user=root login_user=root host={{ item }} login_password={{ root_db_password }}"
+#  name: update mysql root password for all root accounts
+#  with_items: #again
+#    - localhost
+#  when: mysql_check_root_password_presence
+#    - !ruby/symbol ":1"
+#-
+#  become: true
+#  mysql_user: "user=root login_user=root login_password={{ root_db_password}} name='root' host={{ item }} state=absent"
+#  name: user authentication in database
+#  with_items:
+#    - localhost
+#    - !ruby/symbol ":1"
+#    - "{{ inventory_hostname }}"
+#-
+#  mysql_db: "name=test state=absent"
+#  name: "remove the test database"
+#-
+#  name: "Restarting mysql service"
+#  service: "name=mysql state=restarted"

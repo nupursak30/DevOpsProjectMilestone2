@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: edu.ncsu.csc.itrust2.apitest.APIPatientTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.935 s <<< FAILURE! - in edu.ncsu.csc.itrust2.apitest.APIPatientTest
+testGetNonExistentPatient(edu.ncsu.csc.itrust2.apitest.APIPatientTest)  Time elapsed: 0.157 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<404> but was:<200>
+	at edu.ncsu.csc.itrust2.apitest.APIPatientTest.testGetNonExistentPatient(APIPatientTest.java:70)
+
+testPatientAPI(edu.ncsu.csc.itrust2.apitest.APIPatientTest)  Time elapsed: 0.562 s  <<< FAILURE!
+java.lang.AssertionError: Content type not set
+	at edu.ncsu.csc.itrust2.apitest.APIPatientTest.testPatientAPI(APIPatientTest.java:119)
+

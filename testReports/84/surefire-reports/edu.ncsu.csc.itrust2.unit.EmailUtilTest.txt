@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: edu.ncsu.csc.itrust2.unit.EmailUtilTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 2.101 s <<< FAILURE! - in edu.ncsu.csc.itrust2.unit.EmailUtilTest
+testEmail(edu.ncsu.csc.itrust2.unit.EmailUtilTest)  Time elapsed: 0.012 s  <<< ERROR!
+java.lang.NullPointerException
+	at edu.ncsu.csc.itrust2.unit.EmailUtilTest.testEmail(EmailUtilTest.java:25)
+

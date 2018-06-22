@@ -1,0 +1,3 @@
+   - name: Reload itrustjenkins-jobs
+     shell: "jenkins-jobs --conf {{ jenkins_job_builder_template_jenkins_jobs_ini_dest }} update {{ jenkins_job_builder_file_itrustjobs_dest }}"
+     become: yes

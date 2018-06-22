@@ -1,0 +1,17 @@
+{
+  "name": "testsuites",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "xml2js": "^0.4.17",
+    "slash": "^1.0.0",
+    "recursive-readdir-sync": "^1.0.6"
+  }
+}

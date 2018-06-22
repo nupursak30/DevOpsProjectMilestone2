@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: edu.ncsu.csc.itrust2.unit.PersonnelFormTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.005 s <<< FAILURE! - in edu.ncsu.csc.itrust2.unit.PersonnelFormTest
+testPersonnelForm(edu.ncsu.csc.itrust2.unit.PersonnelFormTest)  Time elapsed: 0.005 s  <<< ERROR!
+java.lang.NullPointerException
+	at edu.ncsu.csc.itrust2.unit.PersonnelFormTest.testPersonnelForm(PersonnelFormTest.java:39)
+

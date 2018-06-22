@@ -1,0 +1,38 @@
+
+  - name: Copy testMain.js
+    copy:
+      #remote_src=True
+      src=CheckboxCustomFiles/server-side/site/testMain.js
+      dest=checkbox.io/server-side/site/testMain.js
+    #become: yes
+
+  - name: Copy istanbulfile.js
+    copy:
+      #remote_src=True
+      src=CheckboxCustomFiles/server-side/site/istanbulfile.js
+      dest=checkbox.io/server-side/site/istanbulfile.js
+    #become: yes
+
+  - name: Copy main.js
+    copy:
+      src=CheckboxCustomFiles/server-side/site/main.js
+      dest=checkbox.io/server-side/site/main.js
+
+  - name: Create test directory
+    file: path=checkbox.io/server-side/site/test state=directory
+
+  - name: Copy constraint.js
+    copy:
+      src=CheckboxCustomFiles/server-side/site/test/constraint.js
+      dest=checkbox.io/server-side/site/test/constraint.js
+
+  - name: Copy format-polyfill.js
+    copy:
+      src=CheckboxCustomFiles/server-side/site/test/format-polyfill.js
+      dest=checkbox.io/server-side/site/test/format-polyfill.js
+
+  - name: Copy testgenerator.js
+    copy:
+      src=CheckboxCustomFiles/server-side/site/test/testgenerator.js
+      dest=checkbox.io/server-side/site/test/testgenerator.js
+

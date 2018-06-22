@@ -1,0 +1,10 @@
+---
+  #Code Reference: https://gist.github.com/eguchish/42cacc4b8452b30dce05c79a8fa3c259
+  - name: Setup default git configuraiton
+    git_config:
+      name: "{{ item.name }}"
+      scope: global
+      value: "{{ item.value }}"
+    with_items:
+      - {name: "user.name",  value: "<unityID>" }
+      - {name: "user.email", value: "<unityID>@ncsu.edu" }
