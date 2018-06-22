@@ -47,7 +47,7 @@ Following are the steps to perform the tests.
 
 + Resulting coverage is 80%
   
-![Coverage-report](https://github.ncsu.edu/nsakhal/DevOpsProjectMilestone2/blob/master/checkboxioCoverage.PNG)
+![Coverage-report](checkboxioCoverage.PNG)
  
 #### 4. Configuration of Jenkins and Coverage
 using local machine, jenkins build was taking taking 20-30 min, hence I used VCL, which drastically improved Jenkins build time from 20-30 min to 3-4 min. Following steps explains the approach I took.</br>
